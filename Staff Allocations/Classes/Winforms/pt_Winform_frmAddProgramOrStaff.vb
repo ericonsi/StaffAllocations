@@ -52,6 +52,7 @@ Public Class pt_Winform_frmAddProgramOrStaff
                 CSS.Column_Textbox_Add(frm.Add_Datagridview, True, "GL_Code", "GL Code", "GL_Code")
                 CSS.Column_Textbox_Add(frm.Add_Datagridview, True, "Salary", "Salary", "Salary")
                 CSS.Column_Textbox_Add(frm.Add_Datagridview, True, "JobTitle", "Job Title", "JobTitle")
+                CSS.Column_ComboBox_Add(frm.Add_Datagridview, True, "DepartmentHead", "Department Head", "DepartmentHead", 100, LOOKUP_frmAddProgramOrStaff_DepartmentHeadComboSource, "DepartmentHead", "DepartmentHead")
                 CSS.Column_Textbox_Add(frm.Add_Datagridview, True, "Comments", "Comments", "Comments", 300)
 
                 'Not clear why this is needed since the add method sets visibility to false.

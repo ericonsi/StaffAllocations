@@ -185,6 +185,7 @@ Partial Class frmMain
         Me.TableAdapterManager.tblAllocationsTableAdapter = Nothing
         Me.TableAdapterManager.tblAuditForDeletesTableAdapter = Nothing
         Me.TableAdapterManager.tblDepartmentDetailsTableAdapter = Nothing
+        Me.TableAdapterManager.tblDropDownsForDepartmentHeadsTableAdapter = Nothing
         Me.TableAdapterManager.tblDropDownsForSitesTableAdapter = Nothing
         Me.TableAdapterManager.tblExtrasTableAdapter = Nothing
         Me.TableAdapterManager.tblMonthsTableAdapter = Me.TblMonthsTableAdapter
@@ -756,7 +757,7 @@ Partial Class frmMain
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(102, 16)
         Me.Label4.TabIndex = 30
-        Me.Label4.Text = "Version: 171012"
+        Me.Label4.Text = "Version: 180925"
         '
         'frmMain
         '

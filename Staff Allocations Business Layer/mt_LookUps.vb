@@ -220,4 +220,22 @@ Public Class mt_LookUps
         End Try
 
     End Function
+    Public Shared Function LOOKUP_frmAddProgramOrStaff_DepartmentHeadComboSource() As DataTable
+        Try
+            Dim dt As DataTable
+            Dim ehq As New EH_DataUtilities.EH_QueryBuilder
+
+            ehq.ADD_TO_SELECT("DepartmentHead")
+            ehq.ASSIGN_FROM_STATEMENT("tblDropDownsForDepartmentHeads")
+            ehq.ADD_TO_ORDERBY("DepartmentHead")
+            dt = ehq.ATTACH_TO_DATATABLE
+            Return dt
+
+        Catch ex As Exception
+            Dim HandleStandardError As New EH_ExceptionTrapping.EH_Exceptions.Exception_Handlers.StandardHandler
+            HandleStandardError.HANDLE_EXCEPTION(ex, LOOKUP_CondtionalTraceSetting)
+
+        End Try
+
+    End Function
 End Class

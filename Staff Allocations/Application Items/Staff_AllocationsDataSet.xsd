@@ -9,7 +9,7 @@
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="tblAllocationsTableAdapter" GeneratorDataComponentClassName="tblAllocationsTableAdapter" Name="tblAllocations" UserDataComponentName="tblAllocationsTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="local_connection_string (MySettings)" DbObjectName="[STAFF ALLOCATIONS].dbo.tblAllocations" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="local_connection_string (MySettings)" DbObjectName="[Staff Allocations].dbo.tblAllocations" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [tblAllocations] WHERE (([DateID] = @Original_DateID) AND ([ProgramID] = @Original_ProgramID) AND ([StaffID] = @Original_StaffID) AND ([SSMA_TimeStamp] = @Original_SSMA_TimeStamp))</CommandText>
@@ -78,7 +78,7 @@ SELECT ID, DateID, ProgramID, StaffID, Allocation, SSMA_TimeStamp, data_enterer,
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="tblMonthsTableAdapter" GeneratorDataComponentClassName="tblMonthsTableAdapter" Name="tblMonths" UserDataComponentName="tblMonthsTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="local_connection_string (MySettings)" DbObjectName="[STAFF ALLOCATIONS].dbo.tblMonths" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="local_connection_string (MySettings)" DbObjectName="[Staff Allocations].dbo.tblMonths" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [tblMonths] WHERE (([DateID] = @Original_DateID) AND ([SSMA_TimeStamp] = @Original_SSMA_TimeStamp))</CommandText>
@@ -147,7 +147,7 @@ SELECT DateID, sMonth, sYear, Date_Ordinal, SSMA_TimeStamp, data_enterer, insert
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="tblProgramsTableAdapter" GeneratorDataComponentClassName="tblProgramsTableAdapter" Name="tblPrograms" UserDataComponentName="tblProgramsTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="local_connection_string (MySettings)" DbObjectName="[STAFF ALLOCATIONS].dbo.tblPrograms" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="local_connection_string (MySettings)" DbObjectName="[Staff Allocations].dbo.tblPrograms" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [tblPrograms] WHERE (([ProgramID] = @Original_ProgramID) AND ([SSMA_TimeStamp] = @Original_SSMA_TimeStamp))</CommandText>
@@ -227,7 +227,7 @@ WHERE        (Program NOT LIKE '%Placeholder%') AND (Active = 1)</CommandText>
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="tblReportsTableAdapter" GeneratorDataComponentClassName="tblReportsTableAdapter" Name="tblReports" UserDataComponentName="tblReportsTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="local_connection_string (MySettings)" DbObjectName="[STAFF ALLOCATIONS].dbo.tblReports" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="local_connection_string (MySettings)" DbObjectName="[Staff Allocations].dbo.tblReports" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[tblReports] WHERE (([ID] = @Original_ID) AND ([SSMA_Timestamp] = @Original_SSMA_Timestamp))</CommandText>
@@ -293,7 +293,7 @@ SELECT ID, [Report Title], [Report Name], [Report Type], Program, report_type, S
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="tblStaffTableAdapter" GeneratorDataComponentClassName="tblStaffTableAdapter" Name="tblStaff" UserDataComponentName="tblStaffTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="local_connection_string (MySettings)" DbObjectName="[STAFF ALLOCATIONS].dbo.tblStaff" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="local_connection_string (MySettings)" DbObjectName="[Staff Allocations].dbo.tblStaff" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [tblStaff] WHERE (([StaffID] = @Original_StaffID) AND ([SSMA_TimeStamp] = @Original_SSMA_TimeStamp))</CommandText>
@@ -305,8 +305,8 @@ SELECT ID, [Report Title], [Report Name], [Report Type], Program, report_type, S
                 </DeleteCommand>
                 <InsertCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>INSERT INTO [tblStaff] ([Staff], [data_enterer], [insertion_date], [Comments], [FirstName], [LastName], [Middle], [Salary], [EmployeeNumber], [Site], [Active], [GL_Code], [JobTitle], [LoginID], [Manager], [Title], [PercentOfFT]) VALUES (@Staff, @data_enterer, @insertion_date, @Comments, @FirstName, @LastName, @Middle, @Salary, @EmployeeNumber, @Site, @Active, @GL_Code, @JobTitle, @LoginID, @Manager, @Title, @PercentOfFT);
-SELECT StaffID, Staff, SSMA_TimeStamp, data_enterer, insertion_date, Comments, FirstName, LastName, Middle, Salary, EmployeeNumber, Site, Active, GL_Code, JobTitle, LoginID, Manager, Title, PercentOfFT FROM tblStaff WHERE (StaffID = SCOPE_IDENTITY()) ORDER BY Staff</CommandText>
+                    <CommandText>INSERT INTO [tblStaff] ([Staff], [data_enterer], [insertion_date], [Comments], [FirstName], [LastName], [Middle], [Salary], [EmployeeNumber], [Site], [Active], [GL_Code], [JobTitle], [LoginID], [Manager], [Title], [PercentOfFT], [DepartmentHead]) VALUES (@Staff, @data_enterer, @insertion_date, @Comments, @FirstName, @LastName, @Middle, @Salary, @EmployeeNumber, @Site, @Active, @GL_Code, @JobTitle, @LoginID, @Manager, @Title, @PercentOfFT, @DepartmentHead);
+SELECT StaffID, Staff, SSMA_TimeStamp, data_enterer, insertion_date, Comments, FirstName, LastName, Middle, Salary, EmployeeNumber, Site, Active, GL_Code, JobTitle, LoginID, Manager, Title, PercentOfFT, DepartmentHead FROM tblStaff WHERE (StaffID = SCOPE_IDENTITY()) ORDER BY Staff</CommandText>
                     <Parameters>
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Staff" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Staff" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@data_enterer" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="data_enterer" SourceColumnNullMapping="false" SourceVersion="Current" />
@@ -325,19 +325,23 @@ SELECT StaffID, Staff, SSMA_TimeStamp, data_enterer, insertion_date, Comments, F
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Manager" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Manager" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Title" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Title" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@PercentOfFT" Precision="5" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="PercentOfFT" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@DepartmentHead" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="DepartmentHead" SourceColumnNullMapping="false" SourceVersion="Current" />
                     </Parameters>
                   </DbCommand>
                 </InsertCommand>
                 <SelectCommand>
-                  <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>SELECT StaffID, Staff, SSMA_TimeStamp, data_enterer, insertion_date, Comments, FirstName, LastName, Middle, Salary, EmployeeNumber, Site, Active, GL_Code, JobTitle, LoginID, Manager, Title, PercentOfFT FROM tblStaff WHERE (Staff NOT LIKE '%Placeholder%') ORDER BY Staff</CommandText>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        StaffID, Staff, SSMA_TimeStamp, data_enterer, insertion_date, Comments, FirstName, LastName, Middle, Salary, EmployeeNumber, Site, Active, GL_Code, JobTitle, LoginID, Manager, Title, PercentOfFT, DepartmentHead
+FROM            tblStaff
+WHERE        (Staff NOT LIKE '%Placeholder%')
+ORDER BY Staff</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
                 <UpdateCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>UPDATE [tblStaff] SET [Staff] = @Staff, [data_enterer] = @data_enterer, [insertion_date] = @insertion_date, [Comments] = @Comments, [FirstName] = @FirstName, [LastName] = @LastName, [Middle] = @Middle, [Salary] = @Salary, [EmployeeNumber] = @EmployeeNumber, [Site] = @Site, [Active] = @Active, [GL_Code] = @GL_Code, [JobTitle] = @JobTitle, [LoginID] = @LoginID, [Manager] = @Manager, [Title] = @Title, [PercentOfFT] = @PercentOfFT WHERE (([StaffID] = @Original_StaffID) AND ([SSMA_TimeStamp] = @Original_SSMA_TimeStamp));
-SELECT StaffID, Staff, SSMA_TimeStamp, data_enterer, insertion_date, Comments, FirstName, LastName, Middle, Salary, EmployeeNumber, Site, Active, GL_Code, JobTitle, LoginID, Manager, Title, PercentOfFT FROM tblStaff WHERE (StaffID = @StaffID) ORDER BY Staff</CommandText>
+                    <CommandText>UPDATE [tblStaff] SET [Staff] = @Staff, [data_enterer] = @data_enterer, [insertion_date] = @insertion_date, [Comments] = @Comments, [FirstName] = @FirstName, [LastName] = @LastName, [Middle] = @Middle, [Salary] = @Salary, [EmployeeNumber] = @EmployeeNumber, [Site] = @Site, [Active] = @Active, [GL_Code] = @GL_Code, [JobTitle] = @JobTitle, [LoginID] = @LoginID, [Manager] = @Manager, [Title] = @Title, [PercentOfFT] = @PercentOfFT, [DepartmentHead] = @DepartmentHead WHERE (([StaffID] = @Original_StaffID) AND ([SSMA_TimeStamp] = @Original_SSMA_TimeStamp));
+SELECT StaffID, Staff, SSMA_TimeStamp, data_enterer, insertion_date, Comments, FirstName, LastName, Middle, Salary, EmployeeNumber, Site, Active, GL_Code, JobTitle, LoginID, Manager, Title, PercentOfFT, DepartmentHead FROM tblStaff WHERE (StaffID = @StaffID) ORDER BY Staff</CommandText>
                     <Parameters>
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Staff" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Staff" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@data_enterer" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="data_enterer" SourceColumnNullMapping="false" SourceVersion="Current" />
@@ -356,9 +360,10 @@ SELECT StaffID, Staff, SSMA_TimeStamp, data_enterer, insertion_date, Comments, F
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Manager" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Manager" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Title" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Title" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@PercentOfFT" Precision="5" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="PercentOfFT" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@DepartmentHead" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="DepartmentHead" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_StaffID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="StaffID" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Binary" Direction="Input" ParameterName="@Original_SSMA_TimeStamp" Precision="0" ProviderType="Timestamp" Scale="0" Size="0" SourceColumn="SSMA_TimeStamp" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="StaffID" ColumnName="StaffID" DataSourceName="[STAFF ALLOCATIONS].dbo.tblStaff" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@StaffID" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="StaffID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="StaffID" ColumnName="StaffID" DataSourceName="[Staff Allocations].dbo.tblStaff" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@StaffID" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="StaffID" SourceColumnNullMapping="false" SourceVersion="Current" />
                     </Parameters>
                   </DbCommand>
                 </UpdateCommand>
@@ -384,15 +389,13 @@ SELECT StaffID, Staff, SSMA_TimeStamp, data_enterer, insertion_date, Comments, F
               <Mapping SourceColumn="Manager" DataSetColumn="Manager" />
               <Mapping SourceColumn="LoginID" DataSetColumn="LoginID" />
               <Mapping SourceColumn="PercentOfFT" DataSetColumn="PercentOfFT" />
+              <Mapping SourceColumn="DepartmentHead" DataSetColumn="DepartmentHead" />
             </Mappings>
             <Sources>
               <DbSource ConnectionRef="local_connection_string (MySettings)" DbObjectName="[Staff Allocations].dbo.tblStaff" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillActiveOnly" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillActiveOnly" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillActiveOnly">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>SELECT        StaffID, Staff, SSMA_TimeStamp, data_enterer, insertion_date, Comments, FirstName, LastName, Middle, Salary, EmployeeNumber, Site, Active
-FROM            tblStaff
-WHERE        (Staff NOT LIKE '%Placeholder%') AND (Active = 1)
-ORDER BY Staff</CommandText>
+                    <CommandText>SELECT Active, Comments, DepartmentHead, EmployeeNumber, FirstName, GL_Code, JobTitle, LastName, LoginID, Manager, Middle, PercentOfFT, SSMA_TimeStamp, Salary, Site, Staff, StaffID, Title, data_enterer, insertion_date FROM tblStaff WHERE (Staff NOT LIKE '%Placeholder%') AND (Active = 1) ORDER BY Staff</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
@@ -401,7 +404,7 @@ ORDER BY Staff</CommandText>
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="LegMonthTableAdapter" GeneratorDataComponentClassName="LegMonthTableAdapter" Name="LegMonth" UserDataComponentName="LegMonthTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="local_connection_string (MySettings)" DbObjectName="[STAFF ALLOCATIONS].dbo.LegMonth" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="local_connection_string (MySettings)" DbObjectName="[Staff Allocations].dbo.LegMonth" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT DateID, sMonth, sYear, Date_Ordinal, SSMA_TimeStamp, data_enterer, insertion_date, LegDate FROM dbo.LegMonth
@@ -425,7 +428,7 @@ ORDER BY Date_ordinal</CommandText>
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="tblSettingsTableAdapter" GeneratorDataComponentClassName="tblSettingsTableAdapter" Name="tblSettings" UserDataComponentName="tblSettingsTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="local_connection_string (MySettings)" DbObjectName="[STAFF ALLOCATIONS].dbo.tblSettings" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="local_connection_string (MySettings)" DbObjectName="[Staff Allocations].dbo.tblSettings" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [tblSettings] WHERE (([ID] = @Original_ID) AND ((@IsNull_SSMA_TimeStamp = 1 AND [SSMA_TimeStamp] IS NULL) OR ([SSMA_TimeStamp] = @Original_SSMA_TimeStamp)))</CommandText>
@@ -484,7 +487,7 @@ SELECT ID, Setting_Type, Setting, Data_Type, SSMA_TimeStamp, Comments FROM tblSe
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="vwLegStaffTableAdapter" GeneratorDataComponentClassName="vwLegStaffTableAdapter" Name="vwLegStaff" UserDataComponentName="vwLegStaffTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="local_connection_string (MySettings)" DbObjectName="[STAFF ALLOCATIONS].dbo.vwLegStaff" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="local_connection_string (MySettings)" DbObjectName="[Staff Allocations].dbo.vwLegStaff" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>SELECT StaffID, SSMA_TimeStamp, data_enterer, insertion_date, Staff FROM dbo.vwLegStaff</CommandText>
@@ -504,7 +507,7 @@ SELECT ID, Setting_Type, Setting, Data_Type, SSMA_TimeStamp, Comments FROM tblSe
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="tblExtrasTableAdapter" GeneratorDataComponentClassName="tblExtrasTableAdapter" Name="tblExtras" UserDataComponentName="tblExtrasTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="local_connection_string (MySettings)" DbObjectName="[STAFF ALLOCATIONS].dbo.tblExtras" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="local_connection_string (MySettings)" DbObjectName="[Staff Allocations].dbo.tblExtras" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [tblExtras] WHERE (([ID] = @Original_ID) AND ((@IsNull_SSMA_TimeStamp = 1 AND [SSMA_TimeStamp] IS NULL) OR ([SSMA_TimeStamp] = @Original_SSMA_TimeStamp)))</CommandText>
@@ -563,7 +566,7 @@ SELECT ID, Extra_Name, Extra_Type, SSMA_TimeStamp, Comments, Presenting_Name FRO
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="tblSpaceAndStaffTotalsTableAdapter" GeneratorDataComponentClassName="tblSpaceAndStaffTotalsTableAdapter" Name="tblSpaceAndStaffTotals" UserDataComponentName="tblSpaceAndStaffTotalsTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="local_connection_string (MySettings)" DbObjectName="[STAFF ALLOCATIONS].dbo.tblSpaceAndStaffTotals" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="local_connection_string (MySettings)" DbObjectName="[Staff Allocations].dbo.tblSpaceAndStaffTotals" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[tblSpaceAndStaffTotals] WHERE (([ID] = @Original_ID) AND ((@IsNull_SSMA_TimeStamp = 1 AND [SSMA_TimeStamp] IS NULL) OR ([SSMA_TimeStamp] = @Original_SSMA_TimeStamp)))</CommandText>
@@ -619,7 +622,7 @@ SELECT ID, Location, Total_Staff, SSMA_TimeStamp, Comments FROM tblSpaceAndStaff
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="tblDropDownsForSitesTableAdapter" GeneratorDataComponentClassName="tblDropDownsForSitesTableAdapter" Name="tblDropDownsForSites" UserDataComponentName="tblDropDownsForSitesTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="local_connection_string (MySettings)" DbObjectName="[STAFF ALLOCATIONS].dbo.tblDropDownsForSites" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="local_connection_string (MySettings)" DbObjectName="[Staff Allocations].dbo.tblDropDownsForSites" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[tblDropDownsForSites] WHERE (([ID] = @Original_ID) AND ((@IsNull_Entry = 1 AND [Entry] IS NULL) OR ([Entry] = @Original_Entry)) AND ((@IsNull_EntryOrder = 1 AND [EntryOrder] IS NULL) OR ([EntryOrder] = @Original_EntryOrder)))</CommandText>
@@ -675,7 +678,7 @@ SELECT ID, Entry, EntryOrder FROM tblDropDownsForSites WHERE (ID = @ID)</Command
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="tblAuditForDeletesTableAdapter" GeneratorDataComponentClassName="tblAuditForDeletesTableAdapter" Name="tblAuditForDeletes" UserDataComponentName="tblAuditForDeletesTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="local_connection_string (MySettings)" DbObjectName="[STAFF ALLOCATIONS].dbo.tblAuditForDeletes" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="local_connection_string (MySettings)" DbObjectName="[Staff Allocations].dbo.tblAuditForDeletes" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[tblAuditForDeletes] WHERE (([ID] = @Original_ID) AND ((@IsNull_OriginalEnterer = 1 AND [OriginalEnterer] IS NULL) OR ([OriginalEnterer] = @Original_OriginalEnterer)) AND ((@IsNull_OriginalInsertionDate = 1 AND [OriginalInsertionDate] IS NULL) OR ([OriginalInsertionDate] = @Original_OriginalInsertionDate)) AND ((@IsNull_Deleter = 1 AND [Deleter] IS NULL) OR ([Deleter] = @Original_Deleter)) AND ((@IsNull_DeletionDate = 1 AND [DeletionDate] IS NULL) OR ([DeletionDate] = @Original_DeletionDate)) AND ((@IsNull_OriginalID = 1 AND [OriginalID] IS NULL) OR ([OriginalID] = @Original_OriginalID)) AND ((@IsNull_OriginalProgramID = 1 AND [OriginalProgramID] IS NULL) OR ([OriginalProgramID] = @Original_OriginalProgramID)) AND ((@IsNull_OriginalStaffID = 1 AND [OriginalStaffID] IS NULL) OR ([OriginalStaffID] = @Original_OriginalStaffID)) AND ((@IsNull_OriginalDateID = 1 AND [OriginalDateID] IS NULL) OR ([OriginalDateID] = @Original_OriginalDateID)) AND ((@IsNull_Allocation = 1 AND [Allocation] IS NULL) OR ([Allocation] = @Original_Allocation)) AND ((@IsNull_Approved = 1 AND [Approved] IS NULL) OR ([Approved] = @Original_Approved)))</CommandText>
@@ -787,7 +790,7 @@ SELECT ID, OriginalEnterer, OriginalInsertionDate, Deleter, DeletionDate, Origin
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="tblDepartmentDetailsTableAdapter" GeneratorDataComponentClassName="tblDepartmentDetailsTableAdapter" Name="tblDepartmentDetails" UserDataComponentName="tblDepartmentDetailsTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="local_connection_string (MySettings)" DbObjectName="[STAFF ALLOCATIONS].dbo.tblDepartmentDetails" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="local_connection_string (MySettings)" DbObjectName="[Staff Allocations].dbo.tblDepartmentDetails" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [tblDepartmentDetails] WHERE (([SSMA_TimeStamp] = @Original_SSMA_TimeStamp) AND ([Department] = @Original_Department))</CommandText>
@@ -845,7 +848,7 @@ SELECT SSMA_TimeStamp, data_enterer, insertion_date, Details, DepartmentFullName
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="tblProgramNameDetailsTableAdapter" GeneratorDataComponentClassName="tblProgramNameDetailsTableAdapter" Name="tblProgramNameDetails" UserDataComponentName="tblProgramNameDetailsTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="local_connection_string (MySettings)" DbObjectName="[STAFF ALLOCATIONS].dbo.tblProgramNameDetails" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="local_connection_string (MySettings)" DbObjectName="[Staff Allocations].dbo.tblProgramNameDetails" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[tblProgramNameDetails] WHERE (([ProgramName] = @Original_ProgramName) AND ([SSMA_TimeStamp] = @Original_SSMA_TimeStamp))</CommandText>
@@ -901,6 +904,62 @@ SELECT ProgramName, SSMA_TimeStamp, data_enterer, insertion_date, Details, Progr
             </Mappings>
             <Sources />
           </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="tblDropDownsForDepartmentHeadsTableAdapter" GeneratorDataComponentClassName="tblDropDownsForDepartmentHeadsTableAdapter" Name="tblDropDownsForDepartmentHeads" UserDataComponentName="tblDropDownsForDepartmentHeadsTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="local_connection_string (MySettings)" DbObjectName="[Staff Allocations].dbo.tblDropDownsForDepartmentHeads" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [dbo].[tblDropDownsForDepartmentHeads] WHERE (([ID] = @Original_ID) AND ((@IsNull_DepartmentHead = 1 AND [DepartmentHead] IS NULL) OR ([DepartmentHead] = @Original_DepartmentHead)) AND ((@IsNull_EntryOrder = 1 AND [EntryOrder] IS NULL) OR ([EntryOrder] = @Original_EntryOrder)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_DepartmentHead" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DepartmentHead" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_DepartmentHead" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="DepartmentHead" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_EntryOrder" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="EntryOrder" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_EntryOrder" Precision="4" ProviderType="Decimal" Scale="0" Size="0" SourceColumn="EntryOrder" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [dbo].[tblDropDownsForDepartmentHeads] ([DepartmentHead], [EntryOrder]) VALUES (@DepartmentHead, @EntryOrder);
+SELECT ID, DepartmentHead, EntryOrder FROM tblDropDownsForDepartmentHeads WHERE (ID = SCOPE_IDENTITY())</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@DepartmentHead" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="DepartmentHead" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@EntryOrder" Precision="4" ProviderType="Decimal" Scale="0" Size="0" SourceColumn="EntryOrder" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT ID, DepartmentHead, EntryOrder FROM dbo.tblDropDownsForDepartmentHeads</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [dbo].[tblDropDownsForDepartmentHeads] SET [DepartmentHead] = @DepartmentHead, [EntryOrder] = @EntryOrder WHERE (([ID] = @Original_ID) AND ((@IsNull_DepartmentHead = 1 AND [DepartmentHead] IS NULL) OR ([DepartmentHead] = @Original_DepartmentHead)) AND ((@IsNull_EntryOrder = 1 AND [EntryOrder] IS NULL) OR ([EntryOrder] = @Original_EntryOrder)));
+SELECT ID, DepartmentHead, EntryOrder FROM tblDropDownsForDepartmentHeads WHERE (ID = @ID)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@DepartmentHead" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="DepartmentHead" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@EntryOrder" Precision="4" ProviderType="Decimal" Scale="0" Size="0" SourceColumn="EntryOrder" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_DepartmentHead" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DepartmentHead" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_DepartmentHead" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="DepartmentHead" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_EntryOrder" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="EntryOrder" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_EntryOrder" Precision="4" ProviderType="Decimal" Scale="0" Size="0" SourceColumn="EntryOrder" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="ID" ColumnName="ID" DataSourceName="[Staff Allocations].dbo.tblDropDownsForDepartmentHeads" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@ID" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="ID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ID" DataSetColumn="ID" />
+              <Mapping SourceColumn="DepartmentHead" DataSetColumn="DepartmentHead" />
+              <Mapping SourceColumn="EntryOrder" DataSetColumn="EntryOrder" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
         </Tables>
         <Sources />
       </DataSource>
@@ -909,7 +968,7 @@ SELECT ProgramName, SSMA_TimeStamp, data_enterer, insertion_date, Details, Progr
   <xs:element name="Staff_AllocationsDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="Staff_AllocationsDataSet" msprop:Generator_UserDSName="Staff_AllocationsDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="tblAllocations" msprop:Generator_TableClassName="tblAllocationsDataTable" msprop:Generator_TableVarName="tabletblAllocations" msprop:Generator_RowChangedName="tblAllocationsRowChanged" msprop:Generator_TablePropName="tblAllocations" msprop:Generator_RowDeletingName="tblAllocationsRowDeleting" msprop:Generator_RowChangingName="tblAllocationsRowChanging" msprop:Generator_RowEvHandlerName="tblAllocationsRowChangeEventHandler" msprop:Generator_RowDeletedName="tblAllocationsRowDeleted" msprop:Generator_RowClassName="tblAllocationsRow" msprop:Generator_UserTableName="tblAllocations" msprop:Generator_RowEvArgName="tblAllocationsRowChangeEvent">
+        <xs:element name="tblAllocations" msprop:Generator_TableClassName="tblAllocationsDataTable" msprop:Generator_TableVarName="tabletblAllocations" msprop:Generator_TablePropName="tblAllocations" msprop:Generator_RowDeletingName="tblAllocationsRowDeleting" msprop:Generator_RowChangingName="tblAllocationsRowChanging" msprop:Generator_RowEvHandlerName="tblAllocationsRowChangeEventHandler" msprop:Generator_RowDeletedName="tblAllocationsRowDeleted" msprop:Generator_UserTableName="tblAllocations" msprop:Generator_RowChangedName="tblAllocationsRowChanged" msprop:Generator_RowEvArgName="tblAllocationsRowChangeEvent" msprop:Generator_RowClassName="tblAllocationsRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
@@ -930,7 +989,7 @@ SELECT ProgramName, SSMA_TimeStamp, data_enterer, insertion_date, Details, Progr
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="tblMonths" msprop:Generator_TableClassName="tblMonthsDataTable" msprop:Generator_TableVarName="tabletblMonths" msprop:Generator_RowChangedName="tblMonthsRowChanged" msprop:Generator_TablePropName="tblMonths" msprop:Generator_RowDeletingName="tblMonthsRowDeleting" msprop:Generator_RowChangingName="tblMonthsRowChanging" msprop:Generator_RowEvHandlerName="tblMonthsRowChangeEventHandler" msprop:Generator_RowDeletedName="tblMonthsRowDeleted" msprop:Generator_RowClassName="tblMonthsRow" msprop:Generator_UserTableName="tblMonths" msprop:Generator_RowEvArgName="tblMonthsRowChangeEvent">
+        <xs:element name="tblMonths" msprop:Generator_TableClassName="tblMonthsDataTable" msprop:Generator_TableVarName="tabletblMonths" msprop:Generator_TablePropName="tblMonths" msprop:Generator_RowDeletingName="tblMonthsRowDeleting" msprop:Generator_RowChangingName="tblMonthsRowChanging" msprop:Generator_RowEvHandlerName="tblMonthsRowChangeEventHandler" msprop:Generator_RowDeletedName="tblMonthsRowDeleted" msprop:Generator_UserTableName="tblMonths" msprop:Generator_RowChangedName="tblMonthsRowChanged" msprop:Generator_RowEvArgName="tblMonthsRowChangeEvent" msprop:Generator_RowClassName="tblMonthsRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="DateID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnDateID" msprop:Generator_ColumnPropNameInRow="DateID" msprop:Generator_ColumnPropNameInTable="DateIDColumn" msprop:Generator_UserColumnName="DateID" type="xs:int" />
@@ -976,7 +1035,7 @@ SELECT ProgramName, SSMA_TimeStamp, data_enterer, insertion_date, Details, Progr
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="tblPrograms" msprop:Generator_TableClassName="tblProgramsDataTable" msprop:Generator_TableVarName="tabletblPrograms" msprop:Generator_RowChangedName="tblProgramsRowChanged" msprop:Generator_TablePropName="tblPrograms" msprop:Generator_RowDeletingName="tblProgramsRowDeleting" msprop:Generator_RowChangingName="tblProgramsRowChanging" msprop:Generator_RowEvHandlerName="tblProgramsRowChangeEventHandler" msprop:Generator_RowDeletedName="tblProgramsRowDeleted" msprop:Generator_RowClassName="tblProgramsRow" msprop:Generator_UserTableName="tblPrograms" msprop:Generator_RowEvArgName="tblProgramsRowChangeEvent">
+        <xs:element name="tblPrograms" msprop:Generator_TableClassName="tblProgramsDataTable" msprop:Generator_TableVarName="tabletblPrograms" msprop:Generator_TablePropName="tblPrograms" msprop:Generator_RowDeletingName="tblProgramsRowDeleting" msprop:Generator_RowChangingName="tblProgramsRowChanging" msprop:Generator_RowEvHandlerName="tblProgramsRowChangeEventHandler" msprop:Generator_RowDeletedName="tblProgramsRowDeleted" msprop:Generator_UserTableName="tblPrograms" msprop:Generator_RowChangedName="tblProgramsRowChanged" msprop:Generator_RowEvArgName="tblProgramsRowChangeEvent" msprop:Generator_RowClassName="tblProgramsRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ProgramID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnProgramID" msprop:Generator_ColumnPropNameInRow="ProgramID" msprop:Generator_ColumnPropNameInTable="ProgramIDColumn" msprop:Generator_UserColumnName="ProgramID" type="xs:int" />
@@ -998,8 +1057,7 @@ SELECT ProgramName, SSMA_TimeStamp, data_enterer, insertion_date, Details, Progr
               <xs:element name="insertion_date" msprop:Generator_ColumnVarNameInTable="columninsertion_date" msprop:Generator_ColumnPropNameInRow="insertion_date" msprop:Generator_ColumnPropNameInTable="insertion_dateColumn" msprop:Generator_UserColumnName="insertion_date" type="xs:dateTime" minOccurs="0" />
               <xs:element name="Comments" msprop:Generator_ColumnVarNameInTable="columnComments" msprop:Generator_ColumnPropNameInRow="Comments" msprop:Generator_ColumnPropNameInTable="CommentsColumn" msprop:Generator_UserColumnName="Comments" minOccurs="0">
                 <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                  </xs:restriction>
+                  <xs:restriction base="xs:string" />
                 </xs:simpleType>
               </xs:element>
               <xs:element name="ProgramName" msprop:Generator_ColumnVarNameInTable="columnProgramName" msprop:Generator_ColumnPropNameInRow="ProgramName" msprop:Generator_ColumnPropNameInTable="ProgramNameColumn" msprop:Generator_UserColumnName="ProgramName" minOccurs="0">
@@ -1027,7 +1085,7 @@ SELECT ProgramName, SSMA_TimeStamp, data_enterer, insertion_date, Details, Progr
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="tblReports" msprop:Generator_TableClassName="tblReportsDataTable" msprop:Generator_TableVarName="tabletblReports" msprop:Generator_RowChangedName="tblReportsRowChanged" msprop:Generator_TablePropName="tblReports" msprop:Generator_RowDeletingName="tblReportsRowDeleting" msprop:Generator_RowChangingName="tblReportsRowChanging" msprop:Generator_RowEvHandlerName="tblReportsRowChangeEventHandler" msprop:Generator_RowDeletedName="tblReportsRowDeleted" msprop:Generator_RowClassName="tblReportsRow" msprop:Generator_UserTableName="tblReports" msprop:Generator_RowEvArgName="tblReportsRowChangeEvent">
+        <xs:element name="tblReports" msprop:Generator_TableClassName="tblReportsDataTable" msprop:Generator_TableVarName="tabletblReports" msprop:Generator_TablePropName="tblReports" msprop:Generator_RowDeletingName="tblReportsRowDeleting" msprop:Generator_RowChangingName="tblReportsRowChanging" msprop:Generator_RowEvHandlerName="tblReportsRowChangeEventHandler" msprop:Generator_RowDeletedName="tblReportsRowDeleted" msprop:Generator_UserTableName="tblReports" msprop:Generator_RowChangedName="tblReportsRowChanged" msprop:Generator_RowEvArgName="tblReportsRowChangeEvent" msprop:Generator_RowClassName="tblReportsRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
@@ -1078,7 +1136,7 @@ SELECT ProgramName, SSMA_TimeStamp, data_enterer, insertion_date, Details, Progr
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="tblStaff" msprop:Generator_TableClassName="tblStaffDataTable" msprop:Generator_TableVarName="tabletblStaff" msprop:Generator_RowChangedName="tblStaffRowChanged" msprop:Generator_TablePropName="tblStaff" msprop:Generator_RowDeletingName="tblStaffRowDeleting" msprop:Generator_RowChangingName="tblStaffRowChanging" msprop:Generator_RowEvHandlerName="tblStaffRowChangeEventHandler" msprop:Generator_RowDeletedName="tblStaffRowDeleted" msprop:Generator_RowClassName="tblStaffRow" msprop:Generator_UserTableName="tblStaff" msprop:Generator_RowEvArgName="tblStaffRowChangeEvent">
+        <xs:element name="tblStaff" msprop:Generator_TableClassName="tblStaffDataTable" msprop:Generator_TableVarName="tabletblStaff" msprop:Generator_TablePropName="tblStaff" msprop:Generator_RowDeletingName="tblStaffRowDeleting" msprop:Generator_RowChangingName="tblStaffRowChanging" msprop:Generator_RowEvHandlerName="tblStaffRowChangeEventHandler" msprop:Generator_RowDeletedName="tblStaffRowDeleted" msprop:Generator_UserTableName="tblStaff" msprop:Generator_RowChangedName="tblStaffRowChanged" msprop:Generator_RowEvArgName="tblStaffRowChangeEvent" msprop:Generator_RowClassName="tblStaffRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="StaffID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnStaffID" msprop:Generator_ColumnPropNameInRow="StaffID" msprop:Generator_ColumnPropNameInTable="StaffIDColumn" msprop:Generator_UserColumnName="StaffID" type="xs:int" />
@@ -1100,8 +1158,7 @@ SELECT ProgramName, SSMA_TimeStamp, data_enterer, insertion_date, Details, Progr
               <xs:element name="insertion_date" msprop:Generator_ColumnVarNameInTable="columninsertion_date" msprop:Generator_ColumnPropNameInRow="insertion_date" msprop:Generator_ColumnPropNameInTable="insertion_dateColumn" msprop:Generator_UserColumnName="insertion_date" type="xs:dateTime" minOccurs="0" />
               <xs:element name="Comments" msprop:Generator_ColumnVarNameInTable="columnComments" msprop:Generator_ColumnPropNameInRow="Comments" msprop:Generator_ColumnPropNameInTable="CommentsColumn" msprop:Generator_UserColumnName="Comments" minOccurs="0">
                 <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                  </xs:restriction>
+                  <xs:restriction base="xs:string" />
                 </xs:simpleType>
               </xs:element>
               <xs:element name="LastName" msprop:Generator_ColumnVarNameInTable="columnLastName" msprop:Generator_ColumnPropNameInRow="LastName" msprop:Generator_ColumnPropNameInTable="LastNameColumn" msprop:Generator_UserColumnName="LastName" minOccurs="0">
@@ -1177,10 +1234,17 @@ SELECT ProgramName, SSMA_TimeStamp, data_enterer, insertion_date, Details, Progr
                 </xs:simpleType>
               </xs:element>
               <xs:element name="PercentOfFT" msprop:Generator_ColumnVarNameInTable="columnPercentOfFT" msprop:Generator_ColumnPropNameInRow="PercentOfFT" msprop:Generator_ColumnPropNameInTable="PercentOfFTColumn" msprop:Generator_UserColumnName="PercentOfFT" type="xs:decimal" minOccurs="0" />
+              <xs:element name="DepartmentHead" msprop:Generator_ColumnVarNameInTable="columnDepartmentHead" msprop:Generator_ColumnPropNameInRow="DepartmentHead" msprop:Generator_ColumnPropNameInTable="DepartmentHeadColumn" msprop:Generator_UserColumnName="DepartmentHead" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="LegMonth" msprop:Generator_TableClassName="LegMonthDataTable" msprop:Generator_TableVarName="tableLegMonth" msprop:Generator_TablePropName="LegMonth" msprop:Generator_RowDeletingName="LegMonthRowDeleting" msprop:Generator_RowChangingName="LegMonthRowChanging" msprop:Generator_RowEvHandlerName="LegMonthRowChangeEventHandler" msprop:Generator_RowDeletedName="LegMonthRowDeleted" msprop:Generator_UserTableName="LegMonth" msprop:Generator_RowChangedName="LegMonthRowChanged" msprop:Generator_RowEvArgName="LegMonthRowChangeEvent" msprop:Generator_RowClassName="LegMonthRow">
+        <xs:element name="LegMonth" msprop:Generator_TableClassName="LegMonthDataTable" msprop:Generator_TableVarName="tableLegMonth" msprop:Generator_RowChangedName="LegMonthRowChanged" msprop:Generator_TablePropName="LegMonth" msprop:Generator_RowDeletingName="LegMonthRowDeleting" msprop:Generator_RowChangingName="LegMonthRowChanging" msprop:Generator_RowEvHandlerName="LegMonthRowChangeEventHandler" msprop:Generator_RowDeletedName="LegMonthRowDeleted" msprop:Generator_RowClassName="LegMonthRow" msprop:Generator_UserTableName="LegMonth" msprop:Generator_RowEvArgName="LegMonthRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="DateID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnDateID" msprop:Generator_ColumnPropNameInRow="DateID" msprop:Generator_ColumnPropNameInTable="DateIDColumn" msprop:Generator_UserColumnName="DateID" type="xs:int" />
@@ -1218,7 +1282,7 @@ SELECT ProgramName, SSMA_TimeStamp, data_enterer, insertion_date, Details, Progr
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="tblSettings" msprop:Generator_TableClassName="tblSettingsDataTable" msprop:Generator_TableVarName="tabletblSettings" msprop:Generator_RowChangedName="tblSettingsRowChanged" msprop:Generator_TablePropName="tblSettings" msprop:Generator_RowDeletingName="tblSettingsRowDeleting" msprop:Generator_RowChangingName="tblSettingsRowChanging" msprop:Generator_RowEvHandlerName="tblSettingsRowChangeEventHandler" msprop:Generator_RowDeletedName="tblSettingsRowDeleted" msprop:Generator_RowClassName="tblSettingsRow" msprop:Generator_UserTableName="tblSettings" msprop:Generator_RowEvArgName="tblSettingsRowChangeEvent">
+        <xs:element name="tblSettings" msprop:Generator_TableClassName="tblSettingsDataTable" msprop:Generator_TableVarName="tabletblSettings" msprop:Generator_TablePropName="tblSettings" msprop:Generator_RowDeletingName="tblSettingsRowDeleting" msprop:Generator_RowChangingName="tblSettingsRowChanging" msprop:Generator_RowEvHandlerName="tblSettingsRowChangeEventHandler" msprop:Generator_RowDeletedName="tblSettingsRowDeleted" msprop:Generator_UserTableName="tblSettings" msprop:Generator_RowChangedName="tblSettingsRowChanged" msprop:Generator_RowEvArgName="tblSettingsRowChangeEvent" msprop:Generator_RowClassName="tblSettingsRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
@@ -1254,7 +1318,7 @@ SELECT ProgramName, SSMA_TimeStamp, data_enterer, insertion_date, Details, Progr
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="vwLegStaff" msprop:Generator_TableClassName="vwLegStaffDataTable" msprop:Generator_TableVarName="tablevwLegStaff" msprop:Generator_TablePropName="vwLegStaff" msprop:Generator_RowDeletingName="vwLegStaffRowDeleting" msprop:Generator_RowChangingName="vwLegStaffRowChanging" msprop:Generator_RowEvHandlerName="vwLegStaffRowChangeEventHandler" msprop:Generator_RowDeletedName="vwLegStaffRowDeleted" msprop:Generator_UserTableName="vwLegStaff" msprop:Generator_RowChangedName="vwLegStaffRowChanged" msprop:Generator_RowEvArgName="vwLegStaffRowChangeEvent" msprop:Generator_RowClassName="vwLegStaffRow">
+        <xs:element name="vwLegStaff" msprop:Generator_TableClassName="vwLegStaffDataTable" msprop:Generator_TableVarName="tablevwLegStaff" msprop:Generator_RowChangedName="vwLegStaffRowChanged" msprop:Generator_TablePropName="vwLegStaff" msprop:Generator_RowDeletingName="vwLegStaffRowDeleting" msprop:Generator_RowChangingName="vwLegStaffRowChanging" msprop:Generator_RowEvHandlerName="vwLegStaffRowChangeEventHandler" msprop:Generator_RowDeletedName="vwLegStaffRowDeleted" msprop:Generator_RowClassName="vwLegStaffRow" msprop:Generator_UserTableName="vwLegStaff" msprop:Generator_RowEvArgName="vwLegStaffRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="StaffID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnStaffID" msprop:Generator_ColumnPropNameInRow="StaffID" msprop:Generator_ColumnPropNameInTable="StaffIDColumn" msprop:Generator_UserColumnName="StaffID" type="xs:int" />
@@ -1277,7 +1341,7 @@ SELECT ProgramName, SSMA_TimeStamp, data_enterer, insertion_date, Details, Progr
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="tblExtras" msprop:Generator_TableClassName="tblExtrasDataTable" msprop:Generator_TableVarName="tabletblExtras" msprop:Generator_RowChangedName="tblExtrasRowChanged" msprop:Generator_TablePropName="tblExtras" msprop:Generator_RowDeletingName="tblExtrasRowDeleting" msprop:Generator_RowChangingName="tblExtrasRowChanging" msprop:Generator_RowEvHandlerName="tblExtrasRowChangeEventHandler" msprop:Generator_RowDeletedName="tblExtrasRowDeleted" msprop:Generator_RowClassName="tblExtrasRow" msprop:Generator_UserTableName="tblExtras" msprop:Generator_RowEvArgName="tblExtrasRowChangeEvent">
+        <xs:element name="tblExtras" msprop:Generator_TableClassName="tblExtrasDataTable" msprop:Generator_TableVarName="tabletblExtras" msprop:Generator_TablePropName="tblExtras" msprop:Generator_RowDeletingName="tblExtrasRowDeleting" msprop:Generator_RowChangingName="tblExtrasRowChanging" msprop:Generator_RowEvHandlerName="tblExtrasRowChangeEventHandler" msprop:Generator_RowDeletedName="tblExtrasRowDeleted" msprop:Generator_UserTableName="tblExtras" msprop:Generator_RowChangedName="tblExtrasRowChanged" msprop:Generator_RowEvArgName="tblExtrasRowChangeEvent" msprop:Generator_RowClassName="tblExtrasRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
@@ -1313,7 +1377,7 @@ SELECT ProgramName, SSMA_TimeStamp, data_enterer, insertion_date, Details, Progr
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="tblSpaceAndStaffTotals" msprop:Generator_TableClassName="tblSpaceAndStaffTotalsDataTable" msprop:Generator_TableVarName="tabletblSpaceAndStaffTotals" msprop:Generator_RowChangedName="tblSpaceAndStaffTotalsRowChanged" msprop:Generator_TablePropName="tblSpaceAndStaffTotals" msprop:Generator_RowDeletingName="tblSpaceAndStaffTotalsRowDeleting" msprop:Generator_RowChangingName="tblSpaceAndStaffTotalsRowChanging" msprop:Generator_RowEvHandlerName="tblSpaceAndStaffTotalsRowChangeEventHandler" msprop:Generator_RowDeletedName="tblSpaceAndStaffTotalsRowDeleted" msprop:Generator_RowClassName="tblSpaceAndStaffTotalsRow" msprop:Generator_UserTableName="tblSpaceAndStaffTotals" msprop:Generator_RowEvArgName="tblSpaceAndStaffTotalsRowChangeEvent">
+        <xs:element name="tblSpaceAndStaffTotals" msprop:Generator_TableClassName="tblSpaceAndStaffTotalsDataTable" msprop:Generator_TableVarName="tabletblSpaceAndStaffTotals" msprop:Generator_TablePropName="tblSpaceAndStaffTotals" msprop:Generator_RowDeletingName="tblSpaceAndStaffTotalsRowDeleting" msprop:Generator_RowChangingName="tblSpaceAndStaffTotalsRowChanging" msprop:Generator_RowEvHandlerName="tblSpaceAndStaffTotalsRowChangeEventHandler" msprop:Generator_RowDeletedName="tblSpaceAndStaffTotalsRowDeleted" msprop:Generator_UserTableName="tblSpaceAndStaffTotals" msprop:Generator_RowChangedName="tblSpaceAndStaffTotalsRowChanged" msprop:Generator_RowEvArgName="tblSpaceAndStaffTotalsRowChangeEvent" msprop:Generator_RowClassName="tblSpaceAndStaffTotalsRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
@@ -1336,7 +1400,7 @@ SELECT ProgramName, SSMA_TimeStamp, data_enterer, insertion_date, Details, Progr
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="tblDropDownsForSites" msprop:Generator_TableClassName="tblDropDownsForSitesDataTable" msprop:Generator_TableVarName="tabletblDropDownsForSites" msprop:Generator_RowChangedName="tblDropDownsForSitesRowChanged" msprop:Generator_TablePropName="tblDropDownsForSites" msprop:Generator_RowDeletingName="tblDropDownsForSitesRowDeleting" msprop:Generator_RowChangingName="tblDropDownsForSitesRowChanging" msprop:Generator_RowEvHandlerName="tblDropDownsForSitesRowChangeEventHandler" msprop:Generator_RowDeletedName="tblDropDownsForSitesRowDeleted" msprop:Generator_RowClassName="tblDropDownsForSitesRow" msprop:Generator_UserTableName="tblDropDownsForSites" msprop:Generator_RowEvArgName="tblDropDownsForSitesRowChangeEvent">
+        <xs:element name="tblDropDownsForSites" msprop:Generator_TableClassName="tblDropDownsForSitesDataTable" msprop:Generator_TableVarName="tabletblDropDownsForSites" msprop:Generator_TablePropName="tblDropDownsForSites" msprop:Generator_RowDeletingName="tblDropDownsForSitesRowDeleting" msprop:Generator_RowChangingName="tblDropDownsForSitesRowChanging" msprop:Generator_RowEvHandlerName="tblDropDownsForSitesRowChangeEventHandler" msprop:Generator_RowDeletedName="tblDropDownsForSitesRowDeleted" msprop:Generator_UserTableName="tblDropDownsForSites" msprop:Generator_RowChangedName="tblDropDownsForSitesRowChanged" msprop:Generator_RowEvArgName="tblDropDownsForSitesRowChangeEvent" msprop:Generator_RowClassName="tblDropDownsForSitesRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
@@ -1351,7 +1415,7 @@ SELECT ProgramName, SSMA_TimeStamp, data_enterer, insertion_date, Details, Progr
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="tblAuditForDeletes" msprop:Generator_TableClassName="tblAuditForDeletesDataTable" msprop:Generator_TableVarName="tabletblAuditForDeletes" msprop:Generator_RowChangedName="tblAuditForDeletesRowChanged" msprop:Generator_TablePropName="tblAuditForDeletes" msprop:Generator_RowDeletingName="tblAuditForDeletesRowDeleting" msprop:Generator_RowChangingName="tblAuditForDeletesRowChanging" msprop:Generator_RowEvHandlerName="tblAuditForDeletesRowChangeEventHandler" msprop:Generator_RowDeletedName="tblAuditForDeletesRowDeleted" msprop:Generator_RowClassName="tblAuditForDeletesRow" msprop:Generator_UserTableName="tblAuditForDeletes" msprop:Generator_RowEvArgName="tblAuditForDeletesRowChangeEvent">
+        <xs:element name="tblAuditForDeletes" msprop:Generator_TableClassName="tblAuditForDeletesDataTable" msprop:Generator_TableVarName="tabletblAuditForDeletes" msprop:Generator_TablePropName="tblAuditForDeletes" msprop:Generator_RowDeletingName="tblAuditForDeletesRowDeleting" msprop:Generator_RowChangingName="tblAuditForDeletesRowChanging" msprop:Generator_RowEvHandlerName="tblAuditForDeletesRowChangeEventHandler" msprop:Generator_RowDeletedName="tblAuditForDeletesRowDeleted" msprop:Generator_UserTableName="tblAuditForDeletes" msprop:Generator_RowChangedName="tblAuditForDeletesRowChanged" msprop:Generator_RowEvArgName="tblAuditForDeletesRowChangeEvent" msprop:Generator_RowClassName="tblAuditForDeletesRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
@@ -1380,7 +1444,7 @@ SELECT ProgramName, SSMA_TimeStamp, data_enterer, insertion_date, Details, Progr
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="tblDepartmentDetails" msprop:Generator_TableClassName="tblDepartmentDetailsDataTable" msprop:Generator_TableVarName="tabletblDepartmentDetails" msprop:Generator_RowChangedName="tblDepartmentDetailsRowChanged" msprop:Generator_TablePropName="tblDepartmentDetails" msprop:Generator_RowDeletingName="tblDepartmentDetailsRowDeleting" msprop:Generator_RowChangingName="tblDepartmentDetailsRowChanging" msprop:Generator_RowEvHandlerName="tblDepartmentDetailsRowChangeEventHandler" msprop:Generator_RowDeletedName="tblDepartmentDetailsRowDeleted" msprop:Generator_RowClassName="tblDepartmentDetailsRow" msprop:Generator_UserTableName="tblDepartmentDetails" msprop:Generator_RowEvArgName="tblDepartmentDetailsRowChangeEvent">
+        <xs:element name="tblDepartmentDetails" msprop:Generator_TableClassName="tblDepartmentDetailsDataTable" msprop:Generator_TableVarName="tabletblDepartmentDetails" msprop:Generator_TablePropName="tblDepartmentDetails" msprop:Generator_RowDeletingName="tblDepartmentDetailsRowDeleting" msprop:Generator_RowChangingName="tblDepartmentDetailsRowChanging" msprop:Generator_RowEvHandlerName="tblDepartmentDetailsRowChangeEventHandler" msprop:Generator_RowDeletedName="tblDepartmentDetailsRowDeleted" msprop:Generator_UserTableName="tblDepartmentDetails" msprop:Generator_RowChangedName="tblDepartmentDetailsRowChanged" msprop:Generator_RowEvArgName="tblDepartmentDetailsRowChangeEvent" msprop:Generator_RowClassName="tblDepartmentDetailsRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="SSMA_TimeStamp" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnSSMA_TimeStamp" msprop:Generator_ColumnPropNameInRow="SSMA_TimeStamp" msprop:Generator_ColumnPropNameInTable="SSMA_TimeStampColumn" msprop:Generator_UserColumnName="SSMA_TimeStamp" type="xs:base64Binary" minOccurs="0" />
@@ -1416,7 +1480,7 @@ SELECT ProgramName, SSMA_TimeStamp, data_enterer, insertion_date, Details, Progr
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="tblProgramNameDetails" msprop:Generator_TableClassName="tblProgramNameDetailsDataTable" msprop:Generator_TableVarName="tabletblProgramNameDetails" msprop:Generator_RowChangedName="tblProgramNameDetailsRowChanged" msprop:Generator_TablePropName="tblProgramNameDetails" msprop:Generator_RowDeletingName="tblProgramNameDetailsRowDeleting" msprop:Generator_RowChangingName="tblProgramNameDetailsRowChanging" msprop:Generator_RowEvHandlerName="tblProgramNameDetailsRowChangeEventHandler" msprop:Generator_RowDeletedName="tblProgramNameDetailsRowDeleted" msprop:Generator_RowClassName="tblProgramNameDetailsRow" msprop:Generator_UserTableName="tblProgramNameDetails" msprop:Generator_RowEvArgName="tblProgramNameDetailsRowChangeEvent">
+        <xs:element name="tblProgramNameDetails" msprop:Generator_TableClassName="tblProgramNameDetailsDataTable" msprop:Generator_TableVarName="tabletblProgramNameDetails" msprop:Generator_TablePropName="tblProgramNameDetails" msprop:Generator_RowDeletingName="tblProgramNameDetailsRowDeleting" msprop:Generator_RowChangingName="tblProgramNameDetailsRowChanging" msprop:Generator_RowEvHandlerName="tblProgramNameDetailsRowChangeEventHandler" msprop:Generator_RowDeletedName="tblProgramNameDetailsRowDeleted" msprop:Generator_UserTableName="tblProgramNameDetails" msprop:Generator_RowChangedName="tblProgramNameDetailsRowChanged" msprop:Generator_RowEvArgName="tblProgramNameDetailsRowChangeEvent" msprop:Generator_RowClassName="tblProgramNameDetailsRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ProgramName" msprop:Generator_ColumnVarNameInTable="columnProgramName" msprop:Generator_ColumnPropNameInRow="ProgramName" msprop:Generator_ColumnPropNameInTable="ProgramNameColumn" msprop:Generator_UserColumnName="ProgramName">
@@ -1449,6 +1513,21 @@ SELECT ProgramName, SSMA_TimeStamp, data_enterer, insertion_date, Details, Progr
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tblDropDownsForDepartmentHeads" msprop:Generator_TableClassName="tblDropDownsForDepartmentHeadsDataTable" msprop:Generator_TableVarName="tabletblDropDownsForDepartmentHeads" msprop:Generator_TablePropName="tblDropDownsForDepartmentHeads" msprop:Generator_RowDeletingName="tblDropDownsForDepartmentHeadsRowDeleting" msprop:Generator_RowChangingName="tblDropDownsForDepartmentHeadsRowChanging" msprop:Generator_RowEvHandlerName="tblDropDownsForDepartmentHeadsRowChangeEventHandler" msprop:Generator_RowDeletedName="tblDropDownsForDepartmentHeadsRowDeleted" msprop:Generator_UserTableName="tblDropDownsForDepartmentHeads" msprop:Generator_RowChangedName="tblDropDownsForDepartmentHeadsRowChanged" msprop:Generator_RowEvArgName="tblDropDownsForDepartmentHeadsRowChangeEvent" msprop:Generator_RowClassName="tblDropDownsForDepartmentHeadsRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
+              <xs:element name="DepartmentHead" msprop:Generator_ColumnVarNameInTable="columnDepartmentHead" msprop:Generator_ColumnPropNameInRow="DepartmentHead" msprop:Generator_ColumnPropNameInTable="DepartmentHeadColumn" msprop:Generator_UserColumnName="DepartmentHead" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="EntryOrder" msprop:Generator_ColumnVarNameInTable="columnEntryOrder" msprop:Generator_ColumnPropNameInRow="EntryOrder" msprop:Generator_ColumnPropNameInTable="EntryOrderColumn" msprop:Generator_UserColumnName="EntryOrder" type="xs:decimal" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
@@ -1512,14 +1591,18 @@ SELECT ProgramName, SSMA_TimeStamp, data_enterer, insertion_date, Details, Progr
       <xs:selector xpath=".//mstns:tblProgramNameDetails" />
       <xs:field xpath="mstns:ProgramName" />
     </xs:unique>
+    <xs:unique name="tblDropDownsForDepartmentHeads_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:tblDropDownsForDepartmentHeads" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="FK_tblAllocations_tblMonths" msdata:parent="tblMonths" msdata:child="tblAllocations" msdata:parentkey="DateID" msdata:childkey="DateID" msprop:Generator_UserChildTable="tblAllocations" msprop:Generator_ChildPropName="GettblAllocationsRows" msprop:Generator_UserRelationName="FK_tblAllocations_tblMonths" msprop:Generator_ParentPropName="tblMonthsRow" msprop:Generator_RelationVarName="relationFK_tblAllocations_tblMonths" msprop:Generator_UserParentTable="tblMonths" />
-      <msdata:Relationship name="FK_tblAllocations_tblPrograms" msdata:parent="tblPrograms" msdata:child="tblAllocations" msdata:parentkey="ProgramID" msdata:childkey="ProgramID" msprop:Generator_UserChildTable="tblAllocations" msprop:Generator_ChildPropName="GettblAllocationsRows" msprop:Generator_UserRelationName="FK_tblAllocations_tblPrograms" msprop:Generator_ParentPropName="tblProgramsRow" msprop:Generator_RelationVarName="relationFK_tblAllocations_tblPrograms" msprop:Generator_UserParentTable="tblPrograms" />
-      <msdata:Relationship name="FK_tblAllocations_tblStaff" msdata:parent="tblStaff" msdata:child="tblAllocations" msdata:parentkey="StaffID" msdata:childkey="StaffID" msprop:Generator_UserChildTable="tblAllocations" msprop:Generator_ChildPropName="GettblAllocationsRows" msprop:Generator_UserRelationName="FK_tblAllocations_tblStaff" msprop:Generator_ParentPropName="tblStaffRow" msprop:Generator_RelationVarName="relationFK_tblAllocations_tblStaff" msprop:Generator_UserParentTable="tblStaff" />
-      <msdata:Relationship name="FK_tblPrograms_tblPrograms" msdata:parent="tblProgramNameDetails" msdata:child="tblPrograms" msdata:parentkey="ProgramName" msdata:childkey="ProgramName" msprop:Generator_UserChildTable="tblPrograms" msprop:Generator_ChildPropName="GettblProgramsRows" msprop:Generator_UserRelationName="FK_tblPrograms_tblPrograms" msprop:Generator_ParentPropName="tblProgramNameDetailsRow" msprop:Generator_RelationVarName="relationFK_tblPrograms_tblPrograms" msprop:Generator_UserParentTable="tblProgramNameDetails" />
-      <msdata:Relationship name="FK_tblPrograms_tblDepartmentDetails" msdata:parent="tblDepartmentDetails" msdata:child="tblPrograms" msdata:parentkey="Department" msdata:childkey="Department" msprop:Generator_UserChildTable="tblPrograms" msprop:Generator_ChildPropName="GettblProgramsRows" msprop:Generator_UserRelationName="FK_tblPrograms_tblDepartmentDetails" msprop:Generator_RelationVarName="relationFK_tblPrograms_tblDepartmentDetails" msprop:Generator_UserParentTable="tblDepartmentDetails" msprop:Generator_ParentPropName="tblDepartmentDetailsRow" />
+      <msdata:Relationship name="FK_tblAllocations_tblMonths" msdata:parent="tblMonths" msdata:child="tblAllocations" msdata:parentkey="DateID" msdata:childkey="DateID" msprop:Generator_UserChildTable="tblAllocations" msprop:Generator_ChildPropName="GettblAllocationsRows" msprop:Generator_UserRelationName="FK_tblAllocations_tblMonths" msprop:Generator_RelationVarName="relationFK_tblAllocations_tblMonths" msprop:Generator_UserParentTable="tblMonths" msprop:Generator_ParentPropName="tblMonthsRow" />
+      <msdata:Relationship name="FK_tblAllocations_tblPrograms" msdata:parent="tblPrograms" msdata:child="tblAllocations" msdata:parentkey="ProgramID" msdata:childkey="ProgramID" msprop:Generator_UserChildTable="tblAllocations" msprop:Generator_ChildPropName="GettblAllocationsRows" msprop:Generator_UserRelationName="FK_tblAllocations_tblPrograms" msprop:Generator_RelationVarName="relationFK_tblAllocations_tblPrograms" msprop:Generator_UserParentTable="tblPrograms" msprop:Generator_ParentPropName="tblProgramsRow" />
+      <msdata:Relationship name="FK_tblAllocations_tblStaff" msdata:parent="tblStaff" msdata:child="tblAllocations" msdata:parentkey="StaffID" msdata:childkey="StaffID" msprop:Generator_UserChildTable="tblAllocations" msprop:Generator_ChildPropName="GettblAllocationsRows" msprop:Generator_UserRelationName="FK_tblAllocations_tblStaff" msprop:Generator_RelationVarName="relationFK_tblAllocations_tblStaff" msprop:Generator_UserParentTable="tblStaff" msprop:Generator_ParentPropName="tblStaffRow" />
+      <msdata:Relationship name="FK_tblPrograms_tblPrograms" msdata:parent="tblProgramNameDetails" msdata:child="tblPrograms" msdata:parentkey="ProgramName" msdata:childkey="ProgramName" msprop:Generator_UserChildTable="tblPrograms" msprop:Generator_ChildPropName="GettblProgramsRows" msprop:Generator_UserRelationName="FK_tblPrograms_tblPrograms" msprop:Generator_RelationVarName="relationFK_tblPrograms_tblPrograms" msprop:Generator_UserParentTable="tblProgramNameDetails" msprop:Generator_ParentPropName="tblProgramNameDetailsRow" />
+      <msdata:Relationship name="FK_tblPrograms_tblDepartmentDetails" msdata:parent="tblDepartmentDetails" msdata:child="tblPrograms" msdata:parentkey="Department" msdata:childkey="Department" msprop:Generator_UserChildTable="tblPrograms" msprop:Generator_ChildPropName="GettblProgramsRows" msprop:Generator_UserRelationName="FK_tblPrograms_tblDepartmentDetails" msprop:Generator_ParentPropName="tblDepartmentDetailsRow" msprop:Generator_RelationVarName="relationFK_tblPrograms_tblDepartmentDetails" msprop:Generator_UserParentTable="tblDepartmentDetails" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>
