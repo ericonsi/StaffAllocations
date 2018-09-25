@@ -33,10 +33,10 @@ Partial Class frmEditDropdown
         Me.TblSettingsBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.TblSettingsTableAdapter = New Staff_Allocations.Staff_AllocationsDataSetTableAdapters.tblSettingsTableAdapter()
         Me.dgvEditDropDowns = New System.Windows.Forms.DataGridView()
-        Me.TblDepartmentDetailsBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.IDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.EntryDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.EntryOrderDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TblDepartmentDetailsBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         CType(Me.Staff_AllocationsDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TblProgramNameDetailsBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TblDropDownsForSitesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -110,11 +110,6 @@ Partial Class frmEditDropdown
         Me.dgvEditDropDowns.Size = New System.Drawing.Size(523, 493)
         Me.dgvEditDropDowns.TabIndex = 1
         '
-        'TblDepartmentDetailsBindingSource
-        '
-        Me.TblDepartmentDetailsBindingSource.DataMember = "tblDepartmentDetails"
-        Me.TblDepartmentDetailsBindingSource.DataSource = Me.Staff_AllocationsDataSet
-        '
         'IDDataGridViewTextBoxColumn
         '
         Me.IDDataGridViewTextBoxColumn.DataPropertyName = "ID"
@@ -133,6 +128,11 @@ Partial Class frmEditDropdown
         Me.EntryOrderDataGridViewTextBoxColumn.DataPropertyName = "EntryOrder"
         Me.EntryOrderDataGridViewTextBoxColumn.HeaderText = "EntryOrder"
         Me.EntryOrderDataGridViewTextBoxColumn.Name = "EntryOrderDataGridViewTextBoxColumn"
+        '
+        'TblDepartmentDetailsBindingSource
+        '
+        Me.TblDepartmentDetailsBindingSource.DataMember = "tblDepartmentDetails"
+        Me.TblDepartmentDetailsBindingSource.DataSource = Me.Staff_AllocationsDataSet
         '
         'frmEditDropdown
         '

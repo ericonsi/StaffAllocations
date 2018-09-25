@@ -81,4 +81,8 @@ Public Class frmEditDropdown
         End Try
 
     End Sub
+
+    Private Sub dgvEditDropDowns_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvEditDropDowns.CellContentClick
+
+    End Sub
 End Class
