@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Staff_Allocations", "Staff Allocations\Staff_Allocations.vbproj", "{249F2EEB-5FE1-4DFA-91A2-559664CE586C}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Staff_Allocations_MiddleTier", "Staff Allocations Business Layer\Staff_Allocations_MiddleTier.vbproj", "{84B8F244-91BF-41FC-8C49-25BD32D7735A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{249F2EEB-5FE1-4DFA-91A2-559664CE586C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{249F2EEB-5FE1-4DFA-91A2-559664CE586C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{249F2EEB-5FE1-4DFA-91A2-559664CE586C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{249F2EEB-5FE1-4DFA-91A2-559664CE586C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{84B8F244-91BF-41FC-8C49-25BD32D7735A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84B8F244-91BF-41FC-8C49-25BD32D7735A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84B8F244-91BF-41FC-8C49-25BD32D7735A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84B8F244-91BF-41FC-8C49-25BD32D7735A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{84B8F244-91BF-41FC-8C49-25BD32D7735A}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
