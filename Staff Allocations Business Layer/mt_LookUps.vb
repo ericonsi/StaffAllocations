@@ -228,7 +228,7 @@ Public Class mt_LookUps
             ehq.ADD_TO_SELECT("Entry")
             ehq.ASSIGN_FROM_STATEMENT("tblDropDownsForDepartmentHeads")
             ehq.ADD_TO_ORDERBY("Entry")
-            ehq.ADD_TO_WHERE("Include = 'True'")
+            'ehq.ADD_TO_WHERE("Include = 'True'")
             dt = ehq.ATTACH_TO_DATATABLE
             Return dt
 
