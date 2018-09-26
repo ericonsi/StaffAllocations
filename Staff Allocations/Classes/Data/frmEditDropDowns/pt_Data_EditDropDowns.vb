@@ -80,5 +80,21 @@ Namespace pt_Data_EditDropDowns
             Public Overrides Sub UpdateOriginalTableWhenDropdownChanges(newValue As String, oldValue As String) Implements IDropDownEditor.UpdateOriginalTableWhenDropdownChanges
             End Sub
         End Class
+        Public Class DropDownEditor_DepartmentHeads
+            Inherits DropDownEditior_Abstract
+            Implements IDropDownEditor
+
+            Overrides Property OriginalTable As String = "tblStaff"
+            Overrides Property OriginalColumn As String = "DepartmentHead"
+            Public Overrides Property DropdownTableColumn As String = "Entry"
+            Public Overrides Sub ASSIGN_BindingSource_To_DGV(dgv As DataGridView)
+                dgv.DataSource = frm.TblDropDownsForDepartmentHeadsBindingSource
+            End Sub
+            Public Overrides Sub ADD_Columns()
+                mtw_dgv.Column_Textbox_Add(frm.dgvEditDropDowns, True, "Entry", "Department Head", "Entry")
+                mtw_dgv.Column_Textbox_Add(frm.dgvEditDropDowns, True, "Include", "Include In DropDown", "Include")
+            End Sub
+
+        End Class
     End Class
 End Namespace

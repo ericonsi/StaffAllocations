@@ -5915,9 +5915,11 @@ Partial Public Class Staff_AllocationsDataSet
         
         Private columnID As Global.System.Data.DataColumn
         
-        Private columnDepartmentHead As Global.System.Data.DataColumn
-        
         Private columnEntryOrder As Global.System.Data.DataColumn
+        
+        Private columnEntry As Global.System.Data.DataColumn
+        
+        Private columnInclude As Global.System.Data.DataColumn
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
@@ -5964,17 +5966,25 @@ Partial Public Class Staff_AllocationsDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public ReadOnly Property DepartmentHeadColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property EntryOrderColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnDepartmentHead
+                Return Me.columnEntryOrder
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public ReadOnly Property EntryOrderColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property EntryColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnEntryOrder
+                Return Me.columnEntry
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public ReadOnly Property IncludeColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnInclude
             End Get
         End Property
         
@@ -6015,9 +6025,9 @@ Partial Public Class Staff_AllocationsDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Overloads Function AddtblDropDownsForDepartmentHeadsRow(ByVal DepartmentHead As String, ByVal EntryOrder As Decimal) As tblDropDownsForDepartmentHeadsRow
+        Public Overloads Function AddtblDropDownsForDepartmentHeadsRow(ByVal EntryOrder As Decimal, ByVal Entry As String, ByVal Include As Boolean) As tblDropDownsForDepartmentHeadsRow
             Dim rowtblDropDownsForDepartmentHeadsRow As tblDropDownsForDepartmentHeadsRow = CType(Me.NewRow,tblDropDownsForDepartmentHeadsRow)
-            Dim columnValuesArray() As Object = New Object() {Nothing, DepartmentHead, EntryOrder}
+            Dim columnValuesArray() As Object = New Object() {Nothing, EntryOrder, Entry, Include}
             rowtblDropDownsForDepartmentHeadsRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowtblDropDownsForDepartmentHeadsRow)
             Return rowtblDropDownsForDepartmentHeadsRow
@@ -6047,8 +6057,9 @@ Partial Public Class Staff_AllocationsDataSet
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Friend Sub InitVars()
             Me.columnID = MyBase.Columns("ID")
-            Me.columnDepartmentHead = MyBase.Columns("DepartmentHead")
             Me.columnEntryOrder = MyBase.Columns("EntryOrder")
+            Me.columnEntry = MyBase.Columns("Entry")
+            Me.columnInclude = MyBase.Columns("Include")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -6056,10 +6067,12 @@ Partial Public Class Staff_AllocationsDataSet
         Private Sub InitClass()
             Me.columnID = New Global.System.Data.DataColumn("ID", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnID)
-            Me.columnDepartmentHead = New Global.System.Data.DataColumn("DepartmentHead", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnDepartmentHead)
             Me.columnEntryOrder = New Global.System.Data.DataColumn("EntryOrder", GetType(Decimal), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnEntryOrder)
+            Me.columnEntry = New Global.System.Data.DataColumn("Entry", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnEntry)
+            Me.columnInclude = New Global.System.Data.DataColumn("Include", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnInclude)
             Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnID}, true))
             Me.columnID.AutoIncrement = true
             Me.columnID.AutoIncrementSeed = -1
@@ -6067,7 +6080,7 @@ Partial Public Class Staff_AllocationsDataSet
             Me.columnID.AllowDBNull = false
             Me.columnID.ReadOnly = true
             Me.columnID.Unique = true
-            Me.columnDepartmentHead.MaxLength = 50
+            Me.columnEntry.MaxLength = 50
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -9335,22 +9348,6 @@ Partial Public Class Staff_AllocationsDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Property DepartmentHead() As String
-            Get
-                Try 
-                    Return CType(Me(Me.tabletblDropDownsForDepartmentHeads.DepartmentHeadColumn),String)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'DepartmentHead' in table 'tblDropDownsForDepartmentHeads' i"& _ 
-                            "s DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tabletblDropDownsForDepartmentHeads.DepartmentHeadColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Property EntryOrder() As Decimal
             Get
                 Try 
@@ -9367,15 +9364,35 @@ Partial Public Class Staff_AllocationsDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Function IsDepartmentHeadNull() As Boolean
-            Return Me.IsNull(Me.tabletblDropDownsForDepartmentHeads.DepartmentHeadColumn)
-        End Function
+        Public Property Entry() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tabletblDropDownsForDepartmentHeads.EntryColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Entry' in table 'tblDropDownsForDepartmentHeads' is DBNull."& _ 
+                            "", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletblDropDownsForDepartmentHeads.EntryColumn) = value
+            End Set
+        End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Sub SetDepartmentHeadNull()
-            Me(Me.tabletblDropDownsForDepartmentHeads.DepartmentHeadColumn) = Global.System.Convert.DBNull
-        End Sub
+        Public Property Include() As Boolean
+            Get
+                Try 
+                    Return CType(Me(Me.tabletblDropDownsForDepartmentHeads.IncludeColumn),Boolean)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Include' in table 'tblDropDownsForDepartmentHeads' is DBNul"& _ 
+                            "l.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletblDropDownsForDepartmentHeads.IncludeColumn) = value
+            End Set
+        End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
@@ -9387,6 +9404,30 @@ Partial Public Class Staff_AllocationsDataSet
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Sub SetEntryOrderNull()
             Me(Me.tabletblDropDownsForDepartmentHeads.EntryOrderColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function IsEntryNull() As Boolean
+            Return Me.IsNull(Me.tabletblDropDownsForDepartmentHeads.EntryColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub SetEntryNull()
+            Me(Me.tabletblDropDownsForDepartmentHeads.EntryColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function IsIncludeNull() As Boolean
+            Return Me.IsNull(Me.tabletblDropDownsForDepartmentHeads.IncludeColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub SetIncludeNull()
+            Me(Me.tabletblDropDownsForDepartmentHeads.IncludeColumn) = Global.System.Convert.DBNull
         End Sub
     End Class
     
@@ -11726,65 +11767,65 @@ Namespace Staff_AllocationsDataSetTableAdapters
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_SSMA_TimeStamp", Global.System.Data.SqlDbType.Timestamp, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "SSMA_TimeStamp", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.InsertCommand.Connection = Me.Connection
-            Me._adapter.InsertCommand.CommandText = "INSERT INTO [tblStaff] ([Staff], [data_enterer], [insertion_date], [Comments], [F"& _ 
-                "irstName], [LastName], [Middle], [Salary], [EmployeeNumber], [Site], [Active], ["& _ 
-                "GL_Code], [JobTitle], [LoginID], [Manager], [Title], [PercentOfFT], [DepartmentH"& _ 
-                "ead]) VALUES (@Staff, @data_enterer, @insertion_date, @Comments, @FirstName, @La"& _ 
-                "stName, @Middle, @Salary, @EmployeeNumber, @Site, @Active, @GL_Code, @JobTitle, "& _ 
-                "@LoginID, @Manager, @Title, @PercentOfFT, @DepartmentHead);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT StaffID, Sta"& _ 
-                "ff, SSMA_TimeStamp, data_enterer, insertion_date, Comments, FirstName, LastName,"& _ 
-                " Middle, Salary, EmployeeNumber, Site, Active, GL_Code, JobTitle, LoginID, Manag"& _ 
-                "er, Title, PercentOfFT, DepartmentHead FROM tblStaff WHERE (StaffID = SCOPE_IDEN"& _ 
+            Me._adapter.InsertCommand.CommandText = "INSERT INTO [tblStaff] ([Staff], [data_enterer], [insertion_date], [Comments], [L"& _ 
+                "astName], [FirstName], [Middle], [EmployeeNumber], [Salary], [Site], [Active], ["& _ 
+                "Title], [Manager], [LoginID], [GL_Code], [JobTitle], [PercentOfFT], [DepartmentH"& _ 
+                "ead]) VALUES (@Staff, @data_enterer, @insertion_date, @Comments, @LastName, @Fir"& _ 
+                "stName, @Middle, @EmployeeNumber, @Salary, @Site, @Active, @Title, @Manager, @Lo"& _ 
+                "ginID, @GL_Code, @JobTitle, @PercentOfFT, @DepartmentHead);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT StaffID, Sta"& _ 
+                "ff, SSMA_TimeStamp, data_enterer, insertion_date, Comments, LastName, FirstName,"& _ 
+                " Middle, EmployeeNumber, Salary, Site, Active, Title, Manager, LoginID, GL_Code,"& _ 
+                " JobTitle, PercentOfFT, DepartmentHead FROM tblStaff WHERE (StaffID = SCOPE_IDEN"& _ 
                 "TITY()) ORDER BY Staff"
             Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Staff", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Staff", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@data_enterer", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "data_enterer", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@insertion_date", Global.System.Data.SqlDbType.DateTime, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "insertion_date", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Comments", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Comments", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@FirstName", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "FirstName", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@LastName", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "LastName", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@FirstName", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "FirstName", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Middle", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Middle", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Salary", Global.System.Data.SqlDbType.Money, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Salary", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@EmployeeNumber", Global.System.Data.SqlDbType.NChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "EmployeeNumber", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Salary", Global.System.Data.SqlDbType.Money, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Salary", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Site", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Site", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Active", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Active", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Title", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Title", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Manager", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Manager", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@LoginID", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "LoginID", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@GL_Code", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "GL_Code", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@JobTitle", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "JobTitle", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@LoginID", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "LoginID", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Manager", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Manager", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Title", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Title", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@PercentOfFT", Global.System.Data.SqlDbType.[Decimal], 0, Global.System.Data.ParameterDirection.Input, 5, 2, "PercentOfFT", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@DepartmentHead", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "DepartmentHead", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.UpdateCommand.Connection = Me.Connection
             Me._adapter.UpdateCommand.CommandText = "UPDATE [tblStaff] SET [Staff] = @Staff, [data_enterer] = @data_enterer, [insertio"& _ 
-                "n_date] = @insertion_date, [Comments] = @Comments, [FirstName] = @FirstName, [La"& _ 
-                "stName] = @LastName, [Middle] = @Middle, [Salary] = @Salary, [EmployeeNumber] = "& _ 
-                "@EmployeeNumber, [Site] = @Site, [Active] = @Active, [GL_Code] = @GL_Code, [JobT"& _ 
-                "itle] = @JobTitle, [LoginID] = @LoginID, [Manager] = @Manager, [Title] = @Title,"& _ 
+                "n_date] = @insertion_date, [Comments] = @Comments, [LastName] = @LastName, [Firs"& _ 
+                "tName] = @FirstName, [Middle] = @Middle, [EmployeeNumber] = @EmployeeNumber, [Sa"& _ 
+                "lary] = @Salary, [Site] = @Site, [Active] = @Active, [Title] = @Title, [Manager]"& _ 
+                " = @Manager, [LoginID] = @LoginID, [GL_Code] = @GL_Code, [JobTitle] = @JobTitle,"& _ 
                 " [PercentOfFT] = @PercentOfFT, [DepartmentHead] = @DepartmentHead WHERE (([Staff"& _ 
                 "ID] = @Original_StaffID) AND ([SSMA_TimeStamp] = @Original_SSMA_TimeStamp));"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SE"& _ 
-                "LECT StaffID, Staff, SSMA_TimeStamp, data_enterer, insertion_date, Comments, Fir"& _ 
-                "stName, LastName, Middle, Salary, EmployeeNumber, Site, Active, GL_Code, JobTitl"& _ 
-                "e, LoginID, Manager, Title, PercentOfFT, DepartmentHead FROM tblStaff WHERE (Sta"& _ 
+                "LECT StaffID, Staff, SSMA_TimeStamp, data_enterer, insertion_date, Comments, Las"& _ 
+                "tName, FirstName, Middle, EmployeeNumber, Salary, Site, Active, Title, Manager, "& _ 
+                "LoginID, GL_Code, JobTitle, PercentOfFT, DepartmentHead FROM tblStaff WHERE (Sta"& _ 
                 "ffID = @StaffID) ORDER BY Staff"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Staff", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Staff", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@data_enterer", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "data_enterer", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@insertion_date", Global.System.Data.SqlDbType.DateTime, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "insertion_date", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Comments", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Comments", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@FirstName", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "FirstName", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@LastName", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "LastName", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@FirstName", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "FirstName", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Middle", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Middle", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Salary", Global.System.Data.SqlDbType.Money, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Salary", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@EmployeeNumber", Global.System.Data.SqlDbType.NChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "EmployeeNumber", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Salary", Global.System.Data.SqlDbType.Money, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Salary", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Site", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Site", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Active", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Active", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Title", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Title", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Manager", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Manager", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@LoginID", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "LoginID", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@GL_Code", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "GL_Code", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@JobTitle", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "JobTitle", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@LoginID", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "LoginID", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Manager", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Manager", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Title", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Title", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@PercentOfFT", Global.System.Data.SqlDbType.[Decimal], 0, Global.System.Data.ParameterDirection.Input, 5, 2, "PercentOfFT", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@DepartmentHead", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "DepartmentHead", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_StaffID", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "StaffID", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
@@ -11805,10 +11846,8 @@ Namespace Staff_AllocationsDataSetTableAdapters
             Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(1) {}
             Me._commandCollection(0) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT        StaffID, Staff, SSMA_TimeStamp, data_enterer, insertion_date, Comme"& _ 
-                "nts, FirstName, LastName, Middle, Salary, EmployeeNumber, Site, Active, GL_Code,"& _ 
-                " JobTitle, LoginID, Manager, Title, PercentOfFT, DepartmentHead"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM           "& _ 
-                " tblStaff"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (Staff NOT LIKE '%Placeholder%')"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"ORDER BY Staff"
+            Me._commandCollection(0).CommandText = "SELECT        *"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            tblStaff"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (Staff NOT LIKE '%Placeho"& _ 
+                "lder%')"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"ORDER BY Staff"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(1) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(1).Connection = Me.Connection
@@ -11919,18 +11958,18 @@ Namespace Staff_AllocationsDataSetTableAdapters
                     ByVal data_enterer As String,  _
                     ByVal insertion_date As Global.System.Nullable(Of Date),  _
                     ByVal Comments As String,  _
-                    ByVal FirstName As String,  _
                     ByVal LastName As String,  _
+                    ByVal FirstName As String,  _
                     ByVal Middle As String,  _
-                    ByVal Salary As Global.System.Nullable(Of Decimal),  _
                     ByVal EmployeeNumber As String,  _
+                    ByVal Salary As Global.System.Nullable(Of Decimal),  _
                     ByVal Site As String,  _
                     ByVal Active As Boolean,  _
+                    ByVal Title As String,  _
+                    ByVal Manager As String,  _
+                    ByVal LoginID As String,  _
                     ByVal GL_Code As String,  _
                     ByVal JobTitle As String,  _
-                    ByVal LoginID As String,  _
-                    ByVal Manager As String,  _
-                    ByVal Title As String,  _
                     ByVal PercentOfFT As Global.System.Nullable(Of Decimal),  _
                     ByVal DepartmentHead As String) As Integer
             If (Staff Is Nothing) Then
@@ -11953,30 +11992,30 @@ Namespace Staff_AllocationsDataSetTableAdapters
             Else
                 Me.Adapter.InsertCommand.Parameters(3).Value = CType(Comments,String)
             End If
-            If (FirstName Is Nothing) Then
+            If (LastName Is Nothing) Then
                 Me.Adapter.InsertCommand.Parameters(4).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.InsertCommand.Parameters(4).Value = CType(FirstName,String)
+                Me.Adapter.InsertCommand.Parameters(4).Value = CType(LastName,String)
             End If
-            If (LastName Is Nothing) Then
+            If (FirstName Is Nothing) Then
                 Me.Adapter.InsertCommand.Parameters(5).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.InsertCommand.Parameters(5).Value = CType(LastName,String)
+                Me.Adapter.InsertCommand.Parameters(5).Value = CType(FirstName,String)
             End If
             If (Middle Is Nothing) Then
                 Me.Adapter.InsertCommand.Parameters(6).Value = Global.System.DBNull.Value
             Else
                 Me.Adapter.InsertCommand.Parameters(6).Value = CType(Middle,String)
             End If
-            If (Salary.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(7).Value = CType(Salary.Value,Decimal)
-            Else
-                Me.Adapter.InsertCommand.Parameters(7).Value = Global.System.DBNull.Value
-            End If
             If (EmployeeNumber Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(8).Value = Global.System.DBNull.Value
+                Me.Adapter.InsertCommand.Parameters(7).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.InsertCommand.Parameters(8).Value = CType(EmployeeNumber,String)
+                Me.Adapter.InsertCommand.Parameters(7).Value = CType(EmployeeNumber,String)
+            End If
+            If (Salary.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(8).Value = CType(Salary.Value,Decimal)
+            Else
+                Me.Adapter.InsertCommand.Parameters(8).Value = Global.System.DBNull.Value
             End If
             If (Site Is Nothing) Then
                 Me.Adapter.InsertCommand.Parameters(9).Value = Global.System.DBNull.Value
@@ -11984,30 +12023,30 @@ Namespace Staff_AllocationsDataSetTableAdapters
                 Me.Adapter.InsertCommand.Parameters(9).Value = CType(Site,String)
             End If
             Me.Adapter.InsertCommand.Parameters(10).Value = CType(Active,Boolean)
-            If (GL_Code Is Nothing) Then
+            If (Title Is Nothing) Then
                 Me.Adapter.InsertCommand.Parameters(11).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.InsertCommand.Parameters(11).Value = CType(GL_Code,String)
+                Me.Adapter.InsertCommand.Parameters(11).Value = CType(Title,String)
             End If
-            If (JobTitle Is Nothing) Then
+            If (Manager Is Nothing) Then
                 Me.Adapter.InsertCommand.Parameters(12).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.InsertCommand.Parameters(12).Value = CType(JobTitle,String)
+                Me.Adapter.InsertCommand.Parameters(12).Value = CType(Manager,String)
             End If
             If (LoginID Is Nothing) Then
                 Me.Adapter.InsertCommand.Parameters(13).Value = Global.System.DBNull.Value
             Else
                 Me.Adapter.InsertCommand.Parameters(13).Value = CType(LoginID,String)
             End If
-            If (Manager Is Nothing) Then
+            If (GL_Code Is Nothing) Then
                 Me.Adapter.InsertCommand.Parameters(14).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.InsertCommand.Parameters(14).Value = CType(Manager,String)
+                Me.Adapter.InsertCommand.Parameters(14).Value = CType(GL_Code,String)
             End If
-            If (Title Is Nothing) Then
+            If (JobTitle Is Nothing) Then
                 Me.Adapter.InsertCommand.Parameters(15).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.InsertCommand.Parameters(15).Value = CType(Title,String)
+                Me.Adapter.InsertCommand.Parameters(15).Value = CType(JobTitle,String)
             End If
             If (PercentOfFT.HasValue = true) Then
                 Me.Adapter.InsertCommand.Parameters(16).Value = CType(PercentOfFT.Value,Decimal)
@@ -12043,18 +12082,18 @@ Namespace Staff_AllocationsDataSetTableAdapters
                     ByVal data_enterer As String,  _
                     ByVal insertion_date As Global.System.Nullable(Of Date),  _
                     ByVal Comments As String,  _
-                    ByVal FirstName As String,  _
                     ByVal LastName As String,  _
+                    ByVal FirstName As String,  _
                     ByVal Middle As String,  _
-                    ByVal Salary As Global.System.Nullable(Of Decimal),  _
                     ByVal EmployeeNumber As String,  _
+                    ByVal Salary As Global.System.Nullable(Of Decimal),  _
                     ByVal Site As String,  _
                     ByVal Active As Boolean,  _
+                    ByVal Title As String,  _
+                    ByVal Manager As String,  _
+                    ByVal LoginID As String,  _
                     ByVal GL_Code As String,  _
                     ByVal JobTitle As String,  _
-                    ByVal LoginID As String,  _
-                    ByVal Manager As String,  _
-                    ByVal Title As String,  _
                     ByVal PercentOfFT As Global.System.Nullable(Of Decimal),  _
                     ByVal DepartmentHead As String,  _
                     ByVal Original_StaffID As Integer,  _
@@ -12080,30 +12119,30 @@ Namespace Staff_AllocationsDataSetTableAdapters
             Else
                 Me.Adapter.UpdateCommand.Parameters(3).Value = CType(Comments,String)
             End If
-            If (FirstName Is Nothing) Then
+            If (LastName Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(4).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(4).Value = CType(FirstName,String)
+                Me.Adapter.UpdateCommand.Parameters(4).Value = CType(LastName,String)
             End If
-            If (LastName Is Nothing) Then
+            If (FirstName Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(5).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(5).Value = CType(LastName,String)
+                Me.Adapter.UpdateCommand.Parameters(5).Value = CType(FirstName,String)
             End If
             If (Middle Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(6).Value = Global.System.DBNull.Value
             Else
                 Me.Adapter.UpdateCommand.Parameters(6).Value = CType(Middle,String)
             End If
-            If (Salary.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(7).Value = CType(Salary.Value,Decimal)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(7).Value = Global.System.DBNull.Value
-            End If
             If (EmployeeNumber Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(8).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(7).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(8).Value = CType(EmployeeNumber,String)
+                Me.Adapter.UpdateCommand.Parameters(7).Value = CType(EmployeeNumber,String)
+            End If
+            If (Salary.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(8).Value = CType(Salary.Value,Decimal)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(8).Value = Global.System.DBNull.Value
             End If
             If (Site Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(9).Value = Global.System.DBNull.Value
@@ -12111,30 +12150,30 @@ Namespace Staff_AllocationsDataSetTableAdapters
                 Me.Adapter.UpdateCommand.Parameters(9).Value = CType(Site,String)
             End If
             Me.Adapter.UpdateCommand.Parameters(10).Value = CType(Active,Boolean)
-            If (GL_Code Is Nothing) Then
+            If (Title Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(11).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(11).Value = CType(GL_Code,String)
+                Me.Adapter.UpdateCommand.Parameters(11).Value = CType(Title,String)
             End If
-            If (JobTitle Is Nothing) Then
+            If (Manager Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(12).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(12).Value = CType(JobTitle,String)
+                Me.Adapter.UpdateCommand.Parameters(12).Value = CType(Manager,String)
             End If
             If (LoginID Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(13).Value = Global.System.DBNull.Value
             Else
                 Me.Adapter.UpdateCommand.Parameters(13).Value = CType(LoginID,String)
             End If
-            If (Manager Is Nothing) Then
+            If (GL_Code Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(14).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(14).Value = CType(Manager,String)
+                Me.Adapter.UpdateCommand.Parameters(14).Value = CType(GL_Code,String)
             End If
-            If (Title Is Nothing) Then
+            If (JobTitle Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(15).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(15).Value = CType(Title,String)
+                Me.Adapter.UpdateCommand.Parameters(15).Value = CType(JobTitle,String)
             End If
             If (PercentOfFT.HasValue = true) Then
                 Me.Adapter.UpdateCommand.Parameters(16).Value = CType(PercentOfFT.Value,Decimal)
@@ -12177,23 +12216,23 @@ Namespace Staff_AllocationsDataSetTableAdapters
                     ByVal data_enterer As String,  _
                     ByVal insertion_date As Global.System.Nullable(Of Date),  _
                     ByVal Comments As String,  _
-                    ByVal FirstName As String,  _
                     ByVal LastName As String,  _
+                    ByVal FirstName As String,  _
                     ByVal Middle As String,  _
-                    ByVal Salary As Global.System.Nullable(Of Decimal),  _
                     ByVal EmployeeNumber As String,  _
+                    ByVal Salary As Global.System.Nullable(Of Decimal),  _
                     ByVal Site As String,  _
                     ByVal Active As Boolean,  _
+                    ByVal Title As String,  _
+                    ByVal Manager As String,  _
+                    ByVal LoginID As String,  _
                     ByVal GL_Code As String,  _
                     ByVal JobTitle As String,  _
-                    ByVal LoginID As String,  _
-                    ByVal Manager As String,  _
-                    ByVal Title As String,  _
                     ByVal PercentOfFT As Global.System.Nullable(Of Decimal),  _
                     ByVal DepartmentHead As String,  _
                     ByVal Original_StaffID As Integer,  _
                     ByVal Original_SSMA_TimeStamp() As Byte) As Integer
-            Return Me.Update(Staff, data_enterer, insertion_date, Comments, FirstName, LastName, Middle, Salary, EmployeeNumber, Site, Active, GL_Code, JobTitle, LoginID, Manager, Title, PercentOfFT, DepartmentHead, Original_StaffID, Original_SSMA_TimeStamp, Original_StaffID)
+            Return Me.Update(Staff, data_enterer, insertion_date, Comments, LastName, FirstName, Middle, EmployeeNumber, Salary, Site, Active, Title, Manager, LoginID, GL_Code, JobTitle, PercentOfFT, DepartmentHead, Original_StaffID, Original_SSMA_TimeStamp, Original_StaffID)
         End Function
     End Class
     
@@ -15579,45 +15618,53 @@ Namespace Staff_AllocationsDataSetTableAdapters
             tableMapping.SourceTable = "Table"
             tableMapping.DataSetTable = "tblDropDownsForDepartmentHeads"
             tableMapping.ColumnMappings.Add("ID", "ID")
-            tableMapping.ColumnMappings.Add("DepartmentHead", "DepartmentHead")
             tableMapping.ColumnMappings.Add("EntryOrder", "EntryOrder")
+            tableMapping.ColumnMappings.Add("Entry", "Entry")
+            tableMapping.ColumnMappings.Add("Include", "Include")
             Me._adapter.TableMappings.Add(tableMapping)
             Me._adapter.DeleteCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.DeleteCommand.Connection = Me.Connection
-            Me._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[tblDropDownsForDepartmentHeads] WHERE (([ID] = @Original_ID) A"& _ 
-                "ND ((@IsNull_DepartmentHead = 1 AND [DepartmentHead] IS NULL) OR ([DepartmentHea"& _ 
-                "d] = @Original_DepartmentHead)) AND ((@IsNull_EntryOrder = 1 AND [EntryOrder] IS"& _ 
-                " NULL) OR ([EntryOrder] = @Original_EntryOrder)))"
+            Me._adapter.DeleteCommand.CommandText = "DELETE FROM [tblDropDownsForDepartmentHeads] WHERE (([ID] = @Original_ID) AND ((@"& _ 
+                "IsNull_Entry = 1 AND [Entry] IS NULL) OR ([Entry] = @Original_Entry)) AND ((@IsN"& _ 
+                "ull_EntryOrder = 1 AND [EntryOrder] IS NULL) OR ([EntryOrder] = @Original_EntryO"& _ 
+                "rder)) AND ((@IsNull_Include = 1 AND [Include] IS NULL) OR ([Include] = @Origina"& _ 
+                "l_Include)))"
             Me._adapter.DeleteCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_ID", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "ID", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_DepartmentHead", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "DepartmentHead", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_DepartmentHead", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "DepartmentHead", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Entry", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Entry", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Entry", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Entry", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_EntryOrder", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "EntryOrder", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_EntryOrder", Global.System.Data.SqlDbType.[Decimal], 0, Global.System.Data.ParameterDirection.Input, 4, 0, "EntryOrder", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Include", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Include", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Include", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Include", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.InsertCommand.Connection = Me.Connection
-            Me._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[tblDropDownsForDepartmentHeads] ([DepartmentHead], [EntryOrder"& _ 
-                "]) VALUES (@DepartmentHead, @EntryOrder);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT ID, DepartmentHead, EntryOrder"& _ 
-                " FROM tblDropDownsForDepartmentHeads WHERE (ID = SCOPE_IDENTITY())"
+            Me._adapter.InsertCommand.CommandText = "INSERT INTO [tblDropDownsForDepartmentHeads] ([Entry], [EntryOrder], [Include]) V"& _ 
+                "ALUES (@Entry, @EntryOrder, @Include);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT ID, Entry, EntryOrder, Include FR"& _ 
+                "OM tblDropDownsForDepartmentHeads WHERE (ID = SCOPE_IDENTITY())"
             Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@DepartmentHead", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "DepartmentHead", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Entry", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Entry", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@EntryOrder", Global.System.Data.SqlDbType.[Decimal], 0, Global.System.Data.ParameterDirection.Input, 4, 0, "EntryOrder", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Include", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Include", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.UpdateCommand.Connection = Me.Connection
-            Me._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[tblDropDownsForDepartmentHeads] SET [DepartmentHead] = @DepartmentH"& _ 
-                "ead, [EntryOrder] = @EntryOrder WHERE (([ID] = @Original_ID) AND ((@IsNull_Depar"& _ 
-                "tmentHead = 1 AND [DepartmentHead] IS NULL) OR ([DepartmentHead] = @Original_Dep"& _ 
-                "artmentHead)) AND ((@IsNull_EntryOrder = 1 AND [EntryOrder] IS NULL) OR ([EntryO"& _ 
-                "rder] = @Original_EntryOrder)));"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT ID, DepartmentHead, EntryOrder FROM tbl"& _ 
-                "DropDownsForDepartmentHeads WHERE (ID = @ID)"
+            Me._adapter.UpdateCommand.CommandText = "UPDATE [tblDropDownsForDepartmentHeads] SET [Entry] = @Entry, [EntryOrder] = @Ent"& _ 
+                "ryOrder, [Include] = @Include WHERE (([ID] = @Original_ID) AND ((@IsNull_Entry ="& _ 
+                " 1 AND [Entry] IS NULL) OR ([Entry] = @Original_Entry)) AND ((@IsNull_EntryOrder"& _ 
+                " = 1 AND [EntryOrder] IS NULL) OR ([EntryOrder] = @Original_EntryOrder)) AND ((@"& _ 
+                "IsNull_Include = 1 AND [Include] IS NULL) OR ([Include] = @Original_Include)));"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT ID, Entry, EntryOrder, Include FROM tblDropDownsForDepartmentHeads WHERE"& _ 
+                " (ID = @ID)"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@DepartmentHead", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "DepartmentHead", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Entry", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Entry", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@EntryOrder", Global.System.Data.SqlDbType.[Decimal], 0, Global.System.Data.ParameterDirection.Input, 4, 0, "EntryOrder", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Include", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Include", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_ID", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "ID", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_DepartmentHead", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "DepartmentHead", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_DepartmentHead", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "DepartmentHead", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Entry", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Entry", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Entry", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Entry", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_EntryOrder", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "EntryOrder", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_EntryOrder", Global.System.Data.SqlDbType.[Decimal], 0, Global.System.Data.ParameterDirection.Input, 4, 0, "EntryOrder", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Include", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Include", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Include", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Include", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@ID", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "ID", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
         End Sub
         
@@ -15634,7 +15681,7 @@ Namespace Staff_AllocationsDataSetTableAdapters
             Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(0) {}
             Me._commandCollection(0) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT ID, DepartmentHead, EntryOrder FROM dbo.tblDropDownsForDepartmentHeads"
+            Me._commandCollection(0).CommandText = "SELECT ID, Entry, EntryOrder, Include FROM tblDropDownsForDepartmentHeads"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
         End Sub
         
@@ -15694,14 +15741,14 @@ Namespace Staff_AllocationsDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Delete, true)>  _
-        Public Overloads Overridable Function Delete(ByVal Original_ID As Integer, ByVal Original_DepartmentHead As String, ByVal Original_EntryOrder As Global.System.Nullable(Of Decimal)) As Integer
+        Public Overloads Overridable Function Delete(ByVal Original_ID As Integer, ByVal Original_Entry As String, ByVal Original_EntryOrder As Global.System.Nullable(Of Decimal), ByVal Original_Include As Global.System.Nullable(Of Boolean)) As Integer
             Me.Adapter.DeleteCommand.Parameters(0).Value = CType(Original_ID,Integer)
-            If (Original_DepartmentHead Is Nothing) Then
+            If (Original_Entry Is Nothing) Then
                 Me.Adapter.DeleteCommand.Parameters(1).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(2).Value = Global.System.DBNull.Value
             Else
                 Me.Adapter.DeleteCommand.Parameters(1).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(2).Value = CType(Original_DepartmentHead,String)
+                Me.Adapter.DeleteCommand.Parameters(2).Value = CType(Original_Entry,String)
             End If
             If (Original_EntryOrder.HasValue = true) Then
                 Me.Adapter.DeleteCommand.Parameters(3).Value = CType(0,Object)
@@ -15709,6 +15756,13 @@ Namespace Staff_AllocationsDataSetTableAdapters
             Else
                 Me.Adapter.DeleteCommand.Parameters(3).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(4).Value = Global.System.DBNull.Value
+            End If
+            If (Original_Include.HasValue = true) Then
+                Me.Adapter.DeleteCommand.Parameters(5).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(6).Value = CType(Original_Include.Value,Boolean)
+            Else
+                Me.Adapter.DeleteCommand.Parameters(5).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(6).Value = Global.System.DBNull.Value
             End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.DeleteCommand.Connection.State
             If ((Me.Adapter.DeleteCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
@@ -15729,16 +15783,21 @@ Namespace Staff_AllocationsDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, true)>  _
-        Public Overloads Overridable Function Insert(ByVal DepartmentHead As String, ByVal EntryOrder As Global.System.Nullable(Of Decimal)) As Integer
-            If (DepartmentHead Is Nothing) Then
+        Public Overloads Overridable Function Insert(ByVal Entry As String, ByVal EntryOrder As Global.System.Nullable(Of Decimal), ByVal Include As Global.System.Nullable(Of Boolean)) As Integer
+            If (Entry Is Nothing) Then
                 Me.Adapter.InsertCommand.Parameters(0).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.InsertCommand.Parameters(0).Value = CType(DepartmentHead,String)
+                Me.Adapter.InsertCommand.Parameters(0).Value = CType(Entry,String)
             End If
             If (EntryOrder.HasValue = true) Then
                 Me.Adapter.InsertCommand.Parameters(1).Value = CType(EntryOrder.Value,Decimal)
             Else
                 Me.Adapter.InsertCommand.Parameters(1).Value = Global.System.DBNull.Value
+            End If
+            If (Include.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(2).Value = CType(Include.Value,Boolean)
+            Else
+                Me.Adapter.InsertCommand.Parameters(2).Value = Global.System.DBNull.Value
             End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.InsertCommand.Connection.State
             If ((Me.Adapter.InsertCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
@@ -15759,33 +15818,45 @@ Namespace Staff_AllocationsDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
-        Public Overloads Overridable Function Update(ByVal DepartmentHead As String, ByVal EntryOrder As Global.System.Nullable(Of Decimal), ByVal Original_ID As Integer, ByVal Original_DepartmentHead As String, ByVal Original_EntryOrder As Global.System.Nullable(Of Decimal), ByVal ID As Integer) As Integer
-            If (DepartmentHead Is Nothing) Then
+        Public Overloads Overridable Function Update(ByVal Entry As String, ByVal EntryOrder As Global.System.Nullable(Of Decimal), ByVal Include As Global.System.Nullable(Of Boolean), ByVal Original_ID As Integer, ByVal Original_Entry As String, ByVal Original_EntryOrder As Global.System.Nullable(Of Decimal), ByVal Original_Include As Global.System.Nullable(Of Boolean), ByVal ID As Integer) As Integer
+            If (Entry Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(0).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(0).Value = CType(DepartmentHead,String)
+                Me.Adapter.UpdateCommand.Parameters(0).Value = CType(Entry,String)
             End If
             If (EntryOrder.HasValue = true) Then
                 Me.Adapter.UpdateCommand.Parameters(1).Value = CType(EntryOrder.Value,Decimal)
             Else
                 Me.Adapter.UpdateCommand.Parameters(1).Value = Global.System.DBNull.Value
             End If
-            Me.Adapter.UpdateCommand.Parameters(2).Value = CType(Original_ID,Integer)
-            If (Original_DepartmentHead Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(3).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(4).Value = Global.System.DBNull.Value
+            If (Include.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(2).Value = CType(Include.Value,Boolean)
             Else
-                Me.Adapter.UpdateCommand.Parameters(3).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(4).Value = CType(Original_DepartmentHead,String)
+                Me.Adapter.UpdateCommand.Parameters(2).Value = Global.System.DBNull.Value
+            End If
+            Me.Adapter.UpdateCommand.Parameters(3).Value = CType(Original_ID,Integer)
+            If (Original_Entry Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(4).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(5).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(4).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(5).Value = CType(Original_Entry,String)
             End If
             If (Original_EntryOrder.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(5).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(6).Value = CType(Original_EntryOrder.Value,Decimal)
+                Me.Adapter.UpdateCommand.Parameters(6).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(7).Value = CType(Original_EntryOrder.Value,Decimal)
             Else
-                Me.Adapter.UpdateCommand.Parameters(5).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(6).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(6).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(7).Value = Global.System.DBNull.Value
             End If
-            Me.Adapter.UpdateCommand.Parameters(7).Value = CType(ID,Integer)
+            If (Original_Include.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(8).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(9).Value = CType(Original_Include.Value,Boolean)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(8).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(9).Value = Global.System.DBNull.Value
+            End If
+            Me.Adapter.UpdateCommand.Parameters(10).Value = CType(ID,Integer)
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.UpdateCommand.Connection.State
             If ((Me.Adapter.UpdateCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -15805,8 +15876,8 @@ Namespace Staff_AllocationsDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
-        Public Overloads Overridable Function Update(ByVal DepartmentHead As String, ByVal EntryOrder As Global.System.Nullable(Of Decimal), ByVal Original_ID As Integer, ByVal Original_DepartmentHead As String, ByVal Original_EntryOrder As Global.System.Nullable(Of Decimal)) As Integer
-            Return Me.Update(DepartmentHead, EntryOrder, Original_ID, Original_DepartmentHead, Original_EntryOrder, Original_ID)
+        Public Overloads Overridable Function Update(ByVal Entry As String, ByVal EntryOrder As Global.System.Nullable(Of Decimal), ByVal Include As Global.System.Nullable(Of Boolean), ByVal Original_ID As Integer, ByVal Original_Entry As String, ByVal Original_EntryOrder As Global.System.Nullable(Of Decimal), ByVal Original_Include As Global.System.Nullable(Of Boolean)) As Integer
+            Return Me.Update(Entry, EntryOrder, Include, Original_ID, Original_Entry, Original_EntryOrder, Original_Include, Original_ID)
         End Function
     End Class
     

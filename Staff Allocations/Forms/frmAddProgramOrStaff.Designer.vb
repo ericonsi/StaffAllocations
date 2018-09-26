@@ -56,15 +56,6 @@ Partial Class frmAddProgramOrStaff
         Me.radStaff = New System.Windows.Forms.RadioButton()
         Me.radProgram = New System.Windows.Forms.RadioButton()
         Me.Add_Datagridview = New System.Windows.Forms.DataGridView()
-        Me.ActiveDataGridViewCheckBoxColumn = New System.Windows.Forms.DataGridViewCheckBoxColumn()
-        Me.LastNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.FirstNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.MiddleDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.SiteDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.SalaryDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.EmployeeNumberDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.GLCodeDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.JobTitleDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Comments = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TblDropDownsForSitesBindingSource3 = New System.Windows.Forms.BindingSource(Me.components)
         Me.StaffAllocationsDataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
@@ -82,6 +73,18 @@ Partial Class frmAddProgramOrStaff
         Me.btnAddNewProgramName = New System.Windows.Forms.Button()
         Me.btnAddNewSite = New System.Windows.Forms.Button()
         Me.btnAddNewDepartment = New System.Windows.Forms.Button()
+        Me.btnAddNewDepartmentHead = New System.Windows.Forms.Button()
+        Me.JobTitleDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.GLCodeDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.EmployeeNumberDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.SalaryDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.SiteDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.MiddleDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.FirstNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.LastNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ActiveDataGridViewCheckBoxColumn = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.TblDropDownsForDepartmentHeadsBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.TblDropDownsForDepartmentHeadsTableAdapter = New Staff_Allocations.Staff_AllocationsDataSetTableAdapters.tblDropDownsForDepartmentHeadsTableAdapter()
         CType(Me.bnBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.bnBindingNavigator.SuspendLayout()
         CType(Me.TblProgramsBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -100,6 +103,7 @@ Partial Class frmAddProgramOrStaff
         CType(Me.TblDropDownsForSitesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TblDropDownsForSitesBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TblDropDownsForSitesBindingSource2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TblDropDownsForDepartmentHeadsBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'bnBindingNavigator
@@ -363,60 +367,6 @@ Partial Class frmAddProgramOrStaff
         Me.Add_Datagridview.Size = New System.Drawing.Size(1257, 501)
         Me.Add_Datagridview.TabIndex = 5
         '
-        'ActiveDataGridViewCheckBoxColumn
-        '
-        Me.ActiveDataGridViewCheckBoxColumn.DataPropertyName = "Active"
-        Me.ActiveDataGridViewCheckBoxColumn.HeaderText = "Active"
-        Me.ActiveDataGridViewCheckBoxColumn.Name = "ActiveDataGridViewCheckBoxColumn"
-        '
-        'LastNameDataGridViewTextBoxColumn
-        '
-        Me.LastNameDataGridViewTextBoxColumn.DataPropertyName = "LastName"
-        Me.LastNameDataGridViewTextBoxColumn.HeaderText = "LastName"
-        Me.LastNameDataGridViewTextBoxColumn.Name = "LastNameDataGridViewTextBoxColumn"
-        '
-        'FirstNameDataGridViewTextBoxColumn
-        '
-        Me.FirstNameDataGridViewTextBoxColumn.DataPropertyName = "FirstName"
-        Me.FirstNameDataGridViewTextBoxColumn.HeaderText = "FirstName"
-        Me.FirstNameDataGridViewTextBoxColumn.Name = "FirstNameDataGridViewTextBoxColumn"
-        '
-        'MiddleDataGridViewTextBoxColumn
-        '
-        Me.MiddleDataGridViewTextBoxColumn.DataPropertyName = "Middle"
-        Me.MiddleDataGridViewTextBoxColumn.HeaderText = "Middle"
-        Me.MiddleDataGridViewTextBoxColumn.Name = "MiddleDataGridViewTextBoxColumn"
-        '
-        'SiteDataGridViewTextBoxColumn
-        '
-        Me.SiteDataGridViewTextBoxColumn.DataPropertyName = "Site"
-        Me.SiteDataGridViewTextBoxColumn.HeaderText = "Site"
-        Me.SiteDataGridViewTextBoxColumn.Name = "SiteDataGridViewTextBoxColumn"
-        '
-        'SalaryDataGridViewTextBoxColumn
-        '
-        Me.SalaryDataGridViewTextBoxColumn.DataPropertyName = "Salary"
-        Me.SalaryDataGridViewTextBoxColumn.HeaderText = "Salary"
-        Me.SalaryDataGridViewTextBoxColumn.Name = "SalaryDataGridViewTextBoxColumn"
-        '
-        'EmployeeNumberDataGridViewTextBoxColumn
-        '
-        Me.EmployeeNumberDataGridViewTextBoxColumn.DataPropertyName = "EmployeeNumber"
-        Me.EmployeeNumberDataGridViewTextBoxColumn.HeaderText = "EmployeeNumber"
-        Me.EmployeeNumberDataGridViewTextBoxColumn.Name = "EmployeeNumberDataGridViewTextBoxColumn"
-        '
-        'GLCodeDataGridViewTextBoxColumn
-        '
-        Me.GLCodeDataGridViewTextBoxColumn.DataPropertyName = "GL_Code"
-        Me.GLCodeDataGridViewTextBoxColumn.HeaderText = "GL_Code"
-        Me.GLCodeDataGridViewTextBoxColumn.Name = "GLCodeDataGridViewTextBoxColumn"
-        '
-        'JobTitleDataGridViewTextBoxColumn
-        '
-        Me.JobTitleDataGridViewTextBoxColumn.DataPropertyName = "JobTitle"
-        Me.JobTitleDataGridViewTextBoxColumn.HeaderText = "JobTitle"
-        Me.JobTitleDataGridViewTextBoxColumn.Name = "JobTitleDataGridViewTextBoxColumn"
-        '
         'Comments
         '
         Me.Comments.DataPropertyName = "Comments"
@@ -448,6 +398,7 @@ Partial Class frmAddProgramOrStaff
         Me.TableAdapterManager.tblAllocationsTableAdapter = Nothing
         Me.TableAdapterManager.tblAuditForDeletesTableAdapter = Nothing
         Me.TableAdapterManager.tblDepartmentDetailsTableAdapter = Nothing
+        Me.TableAdapterManager.tblDropDownsForDepartmentHeadsTableAdapter = Nothing
         Me.TableAdapterManager.tblDropDownsForSitesTableAdapter = Nothing
         Me.TableAdapterManager.tblExtrasTableAdapter = Nothing
         Me.TableAdapterManager.tblMonthsTableAdapter = Nothing
@@ -524,6 +475,78 @@ Partial Class frmAddProgramOrStaff
         Me.btnAddNewDepartment.Text = "Add/Edit Grant"
         Me.btnAddNewDepartment.UseVisualStyleBackColor = True
         '
+        'btnAddNewDepartmentHead
+        '
+        Me.btnAddNewDepartmentHead.Location = New System.Drawing.Point(396, 45)
+        Me.btnAddNewDepartmentHead.Name = "btnAddNewDepartmentHead"
+        Me.btnAddNewDepartmentHead.Size = New System.Drawing.Size(150, 23)
+        Me.btnAddNewDepartmentHead.TabIndex = 9
+        Me.btnAddNewDepartmentHead.Text = "Add/Edit Department Head"
+        Me.btnAddNewDepartmentHead.UseVisualStyleBackColor = True
+        '
+        'JobTitleDataGridViewTextBoxColumn
+        '
+        Me.JobTitleDataGridViewTextBoxColumn.DataPropertyName = "JobTitle"
+        Me.JobTitleDataGridViewTextBoxColumn.HeaderText = "JobTitle"
+        Me.JobTitleDataGridViewTextBoxColumn.Name = "JobTitleDataGridViewTextBoxColumn"
+        '
+        'GLCodeDataGridViewTextBoxColumn
+        '
+        Me.GLCodeDataGridViewTextBoxColumn.DataPropertyName = "GL_Code"
+        Me.GLCodeDataGridViewTextBoxColumn.HeaderText = "GL_Code"
+        Me.GLCodeDataGridViewTextBoxColumn.Name = "GLCodeDataGridViewTextBoxColumn"
+        '
+        'EmployeeNumberDataGridViewTextBoxColumn
+        '
+        Me.EmployeeNumberDataGridViewTextBoxColumn.DataPropertyName = "EmployeeNumber"
+        Me.EmployeeNumberDataGridViewTextBoxColumn.HeaderText = "EmployeeNumber"
+        Me.EmployeeNumberDataGridViewTextBoxColumn.Name = "EmployeeNumberDataGridViewTextBoxColumn"
+        '
+        'SalaryDataGridViewTextBoxColumn
+        '
+        Me.SalaryDataGridViewTextBoxColumn.DataPropertyName = "Salary"
+        Me.SalaryDataGridViewTextBoxColumn.HeaderText = "Salary"
+        Me.SalaryDataGridViewTextBoxColumn.Name = "SalaryDataGridViewTextBoxColumn"
+        '
+        'SiteDataGridViewTextBoxColumn
+        '
+        Me.SiteDataGridViewTextBoxColumn.DataPropertyName = "Site"
+        Me.SiteDataGridViewTextBoxColumn.HeaderText = "Site"
+        Me.SiteDataGridViewTextBoxColumn.Name = "SiteDataGridViewTextBoxColumn"
+        '
+        'MiddleDataGridViewTextBoxColumn
+        '
+        Me.MiddleDataGridViewTextBoxColumn.DataPropertyName = "Middle"
+        Me.MiddleDataGridViewTextBoxColumn.HeaderText = "Middle"
+        Me.MiddleDataGridViewTextBoxColumn.Name = "MiddleDataGridViewTextBoxColumn"
+        '
+        'FirstNameDataGridViewTextBoxColumn
+        '
+        Me.FirstNameDataGridViewTextBoxColumn.DataPropertyName = "FirstName"
+        Me.FirstNameDataGridViewTextBoxColumn.HeaderText = "FirstName"
+        Me.FirstNameDataGridViewTextBoxColumn.Name = "FirstNameDataGridViewTextBoxColumn"
+        '
+        'LastNameDataGridViewTextBoxColumn
+        '
+        Me.LastNameDataGridViewTextBoxColumn.DataPropertyName = "LastName"
+        Me.LastNameDataGridViewTextBoxColumn.HeaderText = "LastName"
+        Me.LastNameDataGridViewTextBoxColumn.Name = "LastNameDataGridViewTextBoxColumn"
+        '
+        'ActiveDataGridViewCheckBoxColumn
+        '
+        Me.ActiveDataGridViewCheckBoxColumn.DataPropertyName = "Active"
+        Me.ActiveDataGridViewCheckBoxColumn.HeaderText = "Active"
+        Me.ActiveDataGridViewCheckBoxColumn.Name = "ActiveDataGridViewCheckBoxColumn"
+        '
+        'TblDropDownsForDepartmentHeadsBindingSource
+        '
+        Me.TblDropDownsForDepartmentHeadsBindingSource.DataMember = "tblDropDownsForDepartmentHeads"
+        Me.TblDropDownsForDepartmentHeadsBindingSource.DataSource = Me.Staff_AllocationsDataSet
+        '
+        'TblDropDownsForDepartmentHeadsTableAdapter
+        '
+        Me.TblDropDownsForDepartmentHeadsTableAdapter.ClearBeforeFill = True
+        '
         'frmAddProgramOrStaff
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -531,6 +554,7 @@ Partial Class frmAddProgramOrStaff
         Me.AutoScroll = True
         Me.BackColor = System.Drawing.Color.PeachPuff
         Me.ClientSize = New System.Drawing.Size(1276, 648)
+        Me.Controls.Add(Me.btnAddNewDepartmentHead)
         Me.Controls.Add(Me.btnAddNewDepartment)
         Me.Controls.Add(Me.btnAddNewSite)
         Me.Controls.Add(Me.btnAddNewProgramName)
@@ -559,6 +583,7 @@ Partial Class frmAddProgramOrStaff
         CType(Me.TblDropDownsForSitesBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TblDropDownsForSitesBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TblDropDownsForSitesBindingSource2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TblDropDownsForDepartmentHeadsBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -611,6 +636,8 @@ Partial Class frmAddProgramOrStaff
     Friend WithEvents btnAddNewProgramName As Button
     Friend WithEvents btnAddNewSite As Button
     Friend WithEvents btnAddNewDepartment As Button
+    Friend WithEvents Comments As DataGridViewTextBoxColumn
+    Friend WithEvents btnAddNewDepartmentHead As Button
     Friend WithEvents ActiveDataGridViewCheckBoxColumn As DataGridViewCheckBoxColumn
     Friend WithEvents LastNameDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents FirstNameDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
@@ -620,5 +647,6 @@ Partial Class frmAddProgramOrStaff
     Friend WithEvents EmployeeNumberDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents GLCodeDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents JobTitleDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents Comments As DataGridViewTextBoxColumn
+    Friend WithEvents TblDropDownsForDepartmentHeadsBindingSource As BindingSource
+    Friend WithEvents TblDropDownsForDepartmentHeadsTableAdapter As Staff_AllocationsDataSetTableAdapters.tblDropDownsForDepartmentHeadsTableAdapter
 End Class

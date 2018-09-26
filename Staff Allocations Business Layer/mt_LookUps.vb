@@ -225,9 +225,10 @@ Public Class mt_LookUps
             Dim dt As DataTable
             Dim ehq As New EH_DataUtilities.EH_QueryBuilder
 
-            ehq.ADD_TO_SELECT("DepartmentHead")
+            ehq.ADD_TO_SELECT("Entry")
             ehq.ASSIGN_FROM_STATEMENT("tblDropDownsForDepartmentHeads")
-            ehq.ADD_TO_ORDERBY("DepartmentHead")
+            ehq.ADD_TO_ORDERBY("Entry")
+            ehq.ADD_TO_WHERE("Include = 'True'")
             dt = ehq.ATTACH_TO_DATATABLE
             Return dt
 

@@ -21,6 +21,8 @@ Public Class frmEditDropdown
     End Sub
 
     Private Sub frmEditDropDowns_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+        Me.TblDropDownsForDepartmentHeadsTableAdapter.Fill(Me.Staff_AllocationsDataSet.tblDropDownsForDepartmentHeads)
         Me.TblDepartmentDetailsTableAdapter.Fill(Me.Staff_AllocationsDataSet.tblDepartmentDetails)
         Me.TblProgramNameDetailsTableAdapter.Fill(Me.Staff_AllocationsDataSet.tblProgramNameDetails)
         Me.TblDropDownsForSitesTableAdapter.Fill(Me.Staff_AllocationsDataSet.tblDropDownsForSites)
@@ -32,6 +34,7 @@ Public Class frmEditDropdown
         Me.TblDropDownsForSitesBindingSource.EndEdit()
         Me.TblProgramNameDetailsBindingSource.EndEdit()
         Me.TblDepartmentDetailsBindingSource.EndEdit()
+        Me.TblDropDownsForDepartmentHeadsBindingSource.EndEdit()
         Me.TableAdapterManager.UpdateAll(Me.Staff_AllocationsDataSet)
 
 
@@ -45,12 +48,12 @@ Public Class frmEditDropdown
     Private Sub dgvEditDropDowns_CellValidating(sender As Object, e As DataGridViewCellValidatingEventArgs) Handles dgvEditDropDowns.CellValidating
 
         If IsDBNull(dgvEditDropDowns(e.ColumnIndex, e.RowIndex).Value) Then
-                oldValue = ""
-            Else
-                oldValue = dgvEditDropDowns(e.ColumnIndex, e.RowIndex).Value
-            End If
+            oldValue = ""
+        Else
+            oldValue = dgvEditDropDowns(e.ColumnIndex, e.RowIndex).Value
+        End If
 
-        If IsDBNull(e.FormattedValue) Then
+            If IsDBNull(e.FormattedValue) Then
             e.Cancel = True
             Exit Sub
         Else
@@ -82,7 +85,4 @@ Public Class frmEditDropdown
 
     End Sub
 
-    Private Sub dgvEditDropDowns_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvEditDropDowns.CellContentClick
-
-    End Sub
 End Class

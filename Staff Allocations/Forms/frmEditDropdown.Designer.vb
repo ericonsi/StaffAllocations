@@ -28,20 +28,23 @@ Partial Class frmEditDropdown
         Me.TblProgramNameDetailsTableAdapter = New Staff_Allocations.Staff_AllocationsDataSetTableAdapters.tblProgramNameDetailsTableAdapter()
         Me.TableAdapterManager = New Staff_Allocations.Staff_AllocationsDataSetTableAdapters.TableAdapterManager()
         Me.TblDepartmentDetailsTableAdapter = New Staff_Allocations.Staff_AllocationsDataSetTableAdapters.tblDepartmentDetailsTableAdapter()
+        Me.TblDropDownsForDepartmentHeadsTableAdapter = New Staff_Allocations.Staff_AllocationsDataSetTableAdapters.tblDropDownsForDepartmentHeadsTableAdapter()
         Me.TblDropDownsForSitesTableAdapter = New Staff_Allocations.Staff_AllocationsDataSetTableAdapters.tblDropDownsForSitesTableAdapter()
         Me.TblDropDownsForSitesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.TblSettingsBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.TblSettingsTableAdapter = New Staff_Allocations.Staff_AllocationsDataSetTableAdapters.tblSettingsTableAdapter()
         Me.dgvEditDropDowns = New System.Windows.Forms.DataGridView()
         Me.IDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.EntryDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.EntryOrderDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.EntryDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TblDropDownsForDepartmentHeadsBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.TblDepartmentDetailsBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         CType(Me.Staff_AllocationsDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TblProgramNameDetailsBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TblDropDownsForSitesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TblSettingsBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgvEditDropDowns, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TblDropDownsForDepartmentHeadsBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TblDepartmentDetailsBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -65,6 +68,7 @@ Partial Class frmEditDropdown
         Me.TableAdapterManager.tblAllocationsTableAdapter = Nothing
         Me.TableAdapterManager.tblAuditForDeletesTableAdapter = Nothing
         Me.TableAdapterManager.tblDepartmentDetailsTableAdapter = Me.TblDepartmentDetailsTableAdapter
+        Me.TableAdapterManager.tblDropDownsForDepartmentHeadsTableAdapter = Me.TblDropDownsForDepartmentHeadsTableAdapter
         Me.TableAdapterManager.tblDropDownsForSitesTableAdapter = Me.TblDropDownsForSitesTableAdapter
         Me.TableAdapterManager.tblExtrasTableAdapter = Nothing
         Me.TableAdapterManager.tblMonthsTableAdapter = Nothing
@@ -79,6 +83,10 @@ Partial Class frmEditDropdown
         'TblDepartmentDetailsTableAdapter
         '
         Me.TblDepartmentDetailsTableAdapter.ClearBeforeFill = True
+        '
+        'TblDropDownsForDepartmentHeadsTableAdapter
+        '
+        Me.TblDropDownsForDepartmentHeadsTableAdapter.ClearBeforeFill = True
         '
         'TblDropDownsForSitesTableAdapter
         '
@@ -103,8 +111,8 @@ Partial Class frmEditDropdown
         Me.dgvEditDropDowns.AllowUserToDeleteRows = False
         Me.dgvEditDropDowns.AutoGenerateColumns = False
         Me.dgvEditDropDowns.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvEditDropDowns.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IDDataGridViewTextBoxColumn, Me.EntryDataGridViewTextBoxColumn, Me.EntryOrderDataGridViewTextBoxColumn})
-        Me.dgvEditDropDowns.DataSource = Me.TblDropDownsForSitesBindingSource
+        Me.dgvEditDropDowns.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IDDataGridViewTextBoxColumn, Me.EntryOrderDataGridViewTextBoxColumn, Me.EntryDataGridViewTextBoxColumn})
+        Me.dgvEditDropDowns.DataSource = Me.TblDropDownsForDepartmentHeadsBindingSource
         Me.dgvEditDropDowns.Location = New System.Drawing.Point(12, 32)
         Me.dgvEditDropDowns.Name = "dgvEditDropDowns"
         Me.dgvEditDropDowns.Size = New System.Drawing.Size(523, 493)
@@ -117,17 +125,22 @@ Partial Class frmEditDropdown
         Me.IDDataGridViewTextBoxColumn.Name = "IDDataGridViewTextBoxColumn"
         Me.IDDataGridViewTextBoxColumn.ReadOnly = True
         '
+        'EntryOrderDataGridViewTextBoxColumn
+        '
+        Me.EntryOrderDataGridViewTextBoxColumn.DataPropertyName = "EntryOrder"
+        Me.EntryOrderDataGridViewTextBoxColumn.HeaderText = "EntryOrder"
+        Me.EntryOrderDataGridViewTextBoxColumn.Name = "EntryOrderDataGridViewTextBoxColumn"
+        '
         'EntryDataGridViewTextBoxColumn
         '
         Me.EntryDataGridViewTextBoxColumn.DataPropertyName = "Entry"
         Me.EntryDataGridViewTextBoxColumn.HeaderText = "Entry"
         Me.EntryDataGridViewTextBoxColumn.Name = "EntryDataGridViewTextBoxColumn"
         '
-        'EntryOrderDataGridViewTextBoxColumn
+        'TblDropDownsForDepartmentHeadsBindingSource
         '
-        Me.EntryOrderDataGridViewTextBoxColumn.DataPropertyName = "EntryOrder"
-        Me.EntryOrderDataGridViewTextBoxColumn.HeaderText = "EntryOrder"
-        Me.EntryOrderDataGridViewTextBoxColumn.Name = "EntryOrderDataGridViewTextBoxColumn"
+        Me.TblDropDownsForDepartmentHeadsBindingSource.DataMember = "tblDropDownsForDepartmentHeads"
+        Me.TblDropDownsForDepartmentHeadsBindingSource.DataSource = Me.Staff_AllocationsDataSet
         '
         'TblDepartmentDetailsBindingSource
         '
@@ -146,6 +159,7 @@ Partial Class frmEditDropdown
         CType(Me.TblDropDownsForSitesBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TblSettingsBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.dgvEditDropDowns, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TblDropDownsForDepartmentHeadsBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TblDepartmentDetailsBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
@@ -162,7 +176,9 @@ Partial Class frmEditDropdown
     Friend WithEvents dgvEditDropDowns As DataGridView
     Friend WithEvents TblDepartmentDetailsBindingSource As BindingSource
     Friend WithEvents TblDepartmentDetailsTableAdapter As Staff_AllocationsDataSetTableAdapters.tblDepartmentDetailsTableAdapter
+    Friend WithEvents TblDropDownsForDepartmentHeadsBindingSource As BindingSource
+    Friend WithEvents TblDropDownsForDepartmentHeadsTableAdapter As Staff_AllocationsDataSetTableAdapters.tblDropDownsForDepartmentHeadsTableAdapter
     Friend WithEvents IDDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents EntryDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents EntryOrderDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents EntryDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
 End Class

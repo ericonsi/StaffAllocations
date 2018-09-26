@@ -9,6 +9,7 @@ Imports EH_DataUtilities.GeneralDataFunctions
 Imports EH_Winforms_Utilities.EH_DatagridViewFunctions
 Imports Staff_Allocations_MiddleTier.mt_Validation.mt_Routines
 Public Class frmAddProgramOrStaff
+    Public Event OpenfrmEditDropDowns()
     Private Property UpdatePending As Boolean
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         FILL_TABLES()
@@ -230,6 +231,7 @@ Public Class frmAddProgramOrStaff
     Private Sub OPEN_frmEditDropdowns_ProgramName(sender As Object, e As EventArgs) Handles btnAddNewProgramName.Click
         Try
 
+            RaiseEvent OpenfrmEditDropDowns()
             Dim ptd As pt_Data_EditDropDowns.IDropDownEditor = New pt_Data_EditDropDowns.DropDownEditors.DropDownEditor_ProgramNames
 
             Dim f As New frmEditDropdown(ptd)
@@ -247,6 +249,7 @@ Public Class frmAddProgramOrStaff
     Private Sub OPEN_frmEditDropDowns_Site(sender As Object, e As EventArgs) Handles btnAddNewSite.Click
         Try
 
+            RaiseEvent OpenfrmEditDropDowns()
             Dim ptd As pt_Data_EditDropDowns.IDropDownEditor = New pt_Data_EditDropDowns.DropDownEditors.DropDownEditor_Sites
             Dim f As New frmEditDropdown(ptd)
             f.ShowDialog()
@@ -264,6 +267,7 @@ Public Class frmAddProgramOrStaff
     Private Sub OPEN_frmEditDropDowns_Department(sender As Object, e As EventArgs) Handles btnAddNewDepartment.Click
         Try
 
+            RaiseEvent OpenfrmEditDropDowns()
             Dim ptd As pt_Data_EditDropDowns.IDropDownEditor = New pt_Data_EditDropDowns.DropDownEditors.DropDownEditor_Departments
 
             Dim f As New frmEditDropdown(ptd)
@@ -278,6 +282,29 @@ Public Class frmAddProgramOrStaff
             Dim HandleStandardException As New EH_ExceptionTrapping.EH_Exceptions.Exception_Handlers.StandardHandler
             HandleStandardException.HANDLE_EXCEPTION(ex, LOOKUP_CondtionalTraceSetting)
         End Try
+    End Sub
+
+    Private Sub OPEN_frmEditDropDown_DepartmentHead(sender As Object, e As EventArgs) Handles btnAddNewDepartmentHead.Click
+        Try
+
+            RaiseEvent OpenfrmEditDropDowns()
+            Dim ptd As pt_Data_EditDropDowns.IDropDownEditor = New pt_Data_EditDropDowns.DropDownEditors.DropDownEditor_DepartmentHeads
+            Dim f As New frmEditDropdown(ptd)
+            f.ShowDialog()
+
+            FILL_TABLES()
+            Dim SetFormToStaffOrProgram As New pt_Winform_frmAddProgramOrStaff
+            SetFormToStaffOrProgram.SETFORM_frmAddProgramOrStaff("Staff", Me)
+
+        Catch ex As Exception
+            Dim HandleStandardException As New EH_ExceptionTrapping.EH_Exceptions.Exception_Handlers.StandardHandler
+            HandleStandardException.HANDLE_EXCEPTION(ex, LOOKUP_CondtionalTraceSetting)
+        End Try
+    End Sub
+    Private Sub ON_OpenfrmEditDropDowns() Handles Me.OpenfrmEditDropDowns
+
+        MessageBox.Show("When you edit existing entries the new wording is updated throughout the databse for all records. So edit existing entries to fix spelling errors or modify wording.  " & Environment.NewLine & Environment.NewLine & "IF YOU WANT A NEW ENTRY, DO NOT OVERWRITE AN EXISTING ENTRY. ADD A NEW ENTRY.")
+
     End Sub
 
 End Class

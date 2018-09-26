@@ -24,6 +24,7 @@ Public Class pt_Winform_frmAddProgramOrStaff
             EHW.Swapper(frm.btnAddNewProgramName, "Visible", StaffvsProgram = "Staff", False, True)
             EHW.Swapper(frm.btnAddNewDepartment, "Visible", StaffvsProgram = "Staff", False, True)
             EHW.Swapper(frm.btnAddNewSite, "Visible", StaffvsProgram = "Staff", True, False)
+            EHW.Swapper(frm.btnAddNewDepartmentHead, "Visible", StaffvsProgram = "Staff", True, False)
 
         Catch ex As Exception
             Dim HandleStandardException As New EH_ExceptionTrapping.EH_Exceptions.Exception_Handlers.StandardHandler
@@ -36,43 +37,44 @@ Public Class pt_Winform_frmAddProgramOrStaff
         Dim CSS As New Staff_Allocations_MiddleTier.mt_Winforms_Utilities.mt_DataGridViewFunctions
 
         Try
-            'If frm.Add_Datagridview.ColumnCount > 0 Then
-            If Toggle = "Staff" Then
+            If frm.Add_Datagridview.ColumnCount > 0 Then
+                If Toggle = "Staff" Then
 
 
-                RemoveAllColumns(frm.Add_Datagridview)
+                    RemoveAllColumns(frm.Add_Datagridview)
 
-                CSS.Column_Textbox_Add(frm.Add_Datagridview, False, "StaffID", "StaffID", "StaffID", 75)
-                CSS.Column_CheckBox_Add(frm.Add_Datagridview, True, "Active", "Active", "Active", 75, False)
-                CSS.Column_Textbox_Add(frm.Add_Datagridview, True, "LastName", "Last Name", "LastName")
-                CSS.Column_Textbox_Add(frm.Add_Datagridview, True, "FirstName", "First Name", "FirstName")
-                CSS.Column_Textbox_Add(frm.Add_Datagridview, True, "Middle", "Middle", "Middle", 50)
-                CSS.Column_Textbox_Add(frm.Add_Datagridview, True, "PercentOfFT", "Percent of FT", "PercentOfFT")
-                CSS.Column_ComboBox_Add(frm.Add_Datagridview, True, "Site", "Site", "Site", 100, LOOKUP_frmAddProgramOrStaff_SiteComboSource, "Entry", "Entry")
-                CSS.Column_Textbox_Add(frm.Add_Datagridview, True, "GL_Code", "GL Code", "GL_Code")
-                CSS.Column_Textbox_Add(frm.Add_Datagridview, True, "Salary", "Salary", "Salary")
-                CSS.Column_Textbox_Add(frm.Add_Datagridview, True, "JobTitle", "Job Title", "JobTitle")
-                CSS.Column_ComboBox_Add(frm.Add_Datagridview, True, "DepartmentHead", "Department Head", "DepartmentHead", 100, LOOKUP_frmAddProgramOrStaff_DepartmentHeadComboSource, "DepartmentHead", "DepartmentHead")
-                CSS.Column_Textbox_Add(frm.Add_Datagridview, True, "Comments", "Comments", "Comments", 300)
+                    CSS.Column_Textbox_Add(frm.Add_Datagridview, False, "StaffID", "StaffID", "StaffID", 75)
+                    CSS.Column_CheckBox_Add(frm.Add_Datagridview, True, "Active", "Active", "Active", 75, False)
+                    CSS.Column_Textbox_Add(frm.Add_Datagridview, True, "LastName", "Last Name", "LastName")
+                    CSS.Column_Textbox_Add(frm.Add_Datagridview, True, "FirstName", "First Name", "FirstName")
+                    CSS.Column_Textbox_Add(frm.Add_Datagridview, True, "Middle", "Middle", "Middle", 50)
+                    CSS.Column_Textbox_Add(frm.Add_Datagridview, True, "PercentOfFT", "Percent of FT", "PercentOfFT")
+                    CSS.Column_ComboBox_Add(frm.Add_Datagridview, True, "Site", "Site", "Site", 100, LOOKUP_frmAddProgramOrStaff_SiteComboSource, "Entry", "Entry")
+                    CSS.Column_Textbox_Add(frm.Add_Datagridview, True, "GL_Code", "GL Code", "GL_Code")
+                    CSS.Column_Textbox_Add(frm.Add_Datagridview, True, "Salary", "Salary", "Salary")
+                    CSS.Column_Textbox_Add(frm.Add_Datagridview, True, "JobTitle", "Job Title", "JobTitle")
+                    CSS.Column_ComboBox_Add(frm.Add_Datagridview, True, "DepartmentHead", "Department Head", "DepartmentHead", 100, LOOKUP_frmAddProgramOrStaff_DepartmentHeadComboSource, "Entry", "Entry")
+                    CSS.Column_Textbox_Add(frm.Add_Datagridview, True, "Comments", "Comments", "Comments", 300)
 
-                'Not clear why this is needed since the add method sets visibility to false.
-                frm.Add_Datagridview.Columns("StaffID").Visible = False
 
-            Else
+                    'Not clear why this is needed since the add method sets visibility to false.
+                    frm.Add_Datagridview.Columns("StaffID").Visible = False
 
-                RemoveAllColumns(frm.Add_Datagridview)
+                Else
 
-                CSS.Column_Textbox_Add(frm.Add_Datagridview, False, "ProgramID", "ProgramID", "ProgramID", 75)
-                CSS.Column_CheckBox_Add(frm.Add_Datagridview, True, "Active", "Active", "Active", 75, False)
-                CSS.Column_ComboBox_Add(frm.Add_Datagridview, True, "ProgramName", "Funder", "ProgramName", 100, LOOKUP_frmAddProgramOrStaff_ProgramComboSource, "ProgramName", "ProgramName")
-                CSS.Column_ComboBox_Add(frm.Add_Datagridview, True, "Department", "Grant", "Department", 100, LOOKUP_frmAddProgramOrStaff_DepartmentComboSource, "Department", "Department")
-                CSS.Column_Textbox_Add(frm.Add_Datagridview, True, "Comments", "Comments", "Comments", 300)
+                    RemoveAllColumns(frm.Add_Datagridview)
 
-                'Not clear why this is needed since the add method sets visibility to false.
-                frm.Add_Datagridview.Columns("ProgramID").Visible = False
+                    CSS.Column_Textbox_Add(frm.Add_Datagridview, False, "ProgramID", "ProgramID", "ProgramID", 75)
+                    CSS.Column_CheckBox_Add(frm.Add_Datagridview, True, "Active", "Active", "Active", 75, False)
+                    CSS.Column_ComboBox_Add(frm.Add_Datagridview, True, "ProgramName", "Funder", "ProgramName", 100, LOOKUP_frmAddProgramOrStaff_ProgramComboSource, "ProgramName", "ProgramName")
+                    CSS.Column_ComboBox_Add(frm.Add_Datagridview, True, "Department", "Grant", "Department", 100, LOOKUP_frmAddProgramOrStaff_DepartmentComboSource, "Department", "Department")
+                    CSS.Column_Textbox_Add(frm.Add_Datagridview, True, "Comments", "Comments", "Comments", 300)
 
+                    'Not clear why this is needed since the add method sets visibility to false.
+                    frm.Add_Datagridview.Columns("ProgramID").Visible = False
+
+                End If
             End If
-            'End If
 
         Catch ex As Exception
             Dim HandleStandardException As New EH_ExceptionTrapping.EH_Exceptions.Exception_Handlers.StandardHandler
