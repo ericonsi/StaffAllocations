@@ -94,7 +94,6 @@ Public Class frmAddProgramOrStaff
 
             Dim mtv As New Staff_Allocations_MiddleTier.mt_Validation.mt_Routines
 
-
             Add_Datagridview.EndEdit()
             Me.TableAdapterManager.UpdateAll(Me.Staff_AllocationsDataSet)
 

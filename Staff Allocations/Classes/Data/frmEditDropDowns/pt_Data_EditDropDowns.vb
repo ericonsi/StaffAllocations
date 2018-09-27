@@ -92,7 +92,7 @@ Namespace pt_Data_EditDropDowns
             End Sub
             Public Overrides Sub ADD_Columns()
                 mtw_dgv.Column_Textbox_Add(frm.dgvEditDropDowns, True, "Entry", "Department Head", "Entry")
-                'mtw_dgv.Column_CheckBox_Add(frm.dgvEditDropDowns, True, "Include", "Include In DropDown", "Include", 75, False)
+                ' mtw_dgv.Column_CheckBox_Add(frm.dgvEditDropDowns, True, "Include", "Include In DropDown", "Include", 75, False)
             End Sub
 
         End Class
