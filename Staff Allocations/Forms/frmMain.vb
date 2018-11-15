@@ -27,7 +27,7 @@ Public Class frmMain
     End Sub
     Private Sub ProgramOrStaffToggled(sender As Object, e As EventArgs) Handles radStaff.CheckedChanged, radProgram.CheckedChanged
 
-        'swap controls and create datatable whenever Staff/Program toggle changes
+        'swap controls and create datatable whenever Staff/Program toggle changes -
         ' controls and datable creation don't always happen together - sometimes they interfere so only one is done or the other
 
         Dim ptw As New pt_WinForm_frmMain
