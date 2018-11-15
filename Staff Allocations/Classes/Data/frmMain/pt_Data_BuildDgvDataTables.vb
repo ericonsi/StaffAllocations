@@ -46,7 +46,7 @@ Public Class pt_Data_BuildDgvDataTables
 
         Dim RunStoredProcedure As New Staff_Allocations_MiddleTier.mt_Stored_Procedures
 
-        ''''This code is neccessary to save dirty entries to the datatable, don't know why
+        ''''This code is neccessary to save dirty entries to the datatable, I don't know why 
         Dim dt As New DataTable
         frmMain.DataGridView1.DataSource = dt
         '''''
