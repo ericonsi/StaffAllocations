@@ -81,11 +81,10 @@
       <HintPath>..\..\EH_CustomControls\EH_CustomControls\bin\Debug\EH_CustomControls.dll</HintPath>
     </Reference>
     <Reference Include="EH_DataUtilities">
-      <HintPath>..\..\EH_DataUtilities\EH_DataUtilities\bin\Debug\EH_DataUtilities.dll</HintPath>
+      <HintPath>..\..\MightNotBeMostRecent\EH_DataUtlities\EH_DataUtilities\bin\Debug\EH_DataUtilities.dll</HintPath>
     </Reference>
-    <Reference Include="EH_ExceptionTrapping, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\EH_ExceptionTrapping\EH_ExceptionTrapping\bin\Debug\EH_ExceptionTrapping.dll</HintPath>
+    <Reference Include="EH_ExceptionTrapping">
+      <HintPath>..\..\EH_Exceptions\EH_ExceptionTrapping\bin\Debug\EH_ExceptionTrapping.dll</HintPath>
     </Reference>
     <Reference Include="EH_Winforms_Utilities, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>

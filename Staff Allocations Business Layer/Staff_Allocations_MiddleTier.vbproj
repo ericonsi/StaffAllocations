@@ -47,16 +47,16 @@
       <HintPath>..\..\EH_CustomControls\EH_CustomControls\bin\Debug\EH_CustomControls.dll</HintPath>
     </Reference>
     <Reference Include="EH_DataUtilities">
-      <HintPath>..\..\EH_DataUtilities\EH_DataUtilities\bin\Debug\EH_DataUtilities.dll</HintPath>
+      <HintPath>..\..\..\..\Visual Studio\Repos\MightNotBeMostRecent\EH_DataUtlities\EH_DataUtilities\bin\Debug\EH_DataUtilities.dll</HintPath>
     </Reference>
     <Reference Include="EH_ExceptionTrapping">
-      <HintPath>..\..\EH_ExceptionTrapping\EH_ExceptionTrapping\bin\Debug\EH_ExceptionTrapping.dll</HintPath>
+      <HintPath>..\..\..\..\Visual Studio\Repos\EH_Exceptions\EH_ExceptionTrapping\bin\Debug\EH_ExceptionTrapping.dll</HintPath>
     </Reference>
     <Reference Include="EH_Validation">
       <HintPath>..\..\EH_Validation\EH_Validation\bin\Debug\EH_Validation.dll</HintPath>
     </Reference>
     <Reference Include="EH_Winforms_Utilities">
-      <HintPath>..\..\EH_Winforms_Utilities\EH_Winforms_Utilities\bin\Debug\EH_Winforms_Utilities.dll</HintPath>
+      <HintPath>..\..\..\..\Visual Studio\Repos\EH_Winforms_Utilities\eh_winforms_utilities\bin\Debug\EH_Winforms_Utilities.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
