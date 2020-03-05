@@ -3,6 +3,7 @@ Imports System.Data
 Imports System.Windows.Forms
 Imports EH_DataUtilities.EH_LookUp
 Imports Staff_Allocations_MiddleTier.mt_LookUps
+Imports EH_Winforms_Utilities
 Namespace mt_Winforms_Utilities
     Public Class mt_Controls
         Inherits EH_Winforms_Utilities.Control_Functions
