@@ -95,8 +95,10 @@ Public Class frmAddProgramOrStaff
             Dim mtv As New Staff_Allocations_MiddleTier.mt_Validation.mt_Routines
 
             Add_Datagridview.EndEdit()
-            Me.TableAdapterManager.UpdateAll(Me.Staff_AllocationsDataSet)
+            Me.TblProgramsTableAdapter.Update(Me.Staff_AllocationsDataSet)
+            Me.TblStaffTableAdapter1.Update(Me.Staff_AllocationsDataSet)
 
+            'Me.TableAdapterManager.UpdateAll(Me.Staff_AllocationsDataSet)
 
             frmMain.TblProgramsTableAdapter.FillActiveOnly(frmMain.Staff_AllocationsDataSet.tblPrograms)
             frmMain.TblStaffTableAdapter.FillActiveOnly(frmMain.Staff_AllocationsDataSet.tblStaff)
@@ -105,7 +107,7 @@ Public Class frmAddProgramOrStaff
         Catch dbcx As Data.DBConcurrencyException
 
             Dim HandleStandardException As New EH_ExceptionTrapping.EH_Exceptions.Exception_Handlers.StandardHandler
-            HandleStandardException.HANDLE_EXCEPTION(dbcx, LOOKUP_CondtionalTraceSetting)
+            HandleStandardException.HANDLE_EXCEPTION(dbcx, LOOKUP_CondtionalTraceSetting, "There has been a problem with two people being on the same staff or program record at the same time.  It is possible that not all the changes have been saved.  A message has been sent to your DB Admin to fix this problem.")
 
 
         Catch ex As Exception
@@ -302,7 +304,7 @@ Public Class frmAddProgramOrStaff
     End Sub
     Private Sub ON_OpenfrmEditDropDowns() Handles Me.OpenfrmEditDropDowns
 
-        MessageBox.Show("When you edit existing entries the new wording is updated throughout the databse for all records. So edit existing entries to fix spelling errors or modify wording.  " & Environment.NewLine & Environment.NewLine & "IF YOU WANT A NEW ENTRY, DO NOT OVERWRITE AN EXISTING ENTRY. ADD A NEW ENTRY.")
+        MessageBox.Show("When you edit existing entries the new wording is updated throughout the database for all records. So edit existing entries only to fix spelling errors or modify wording.  " & Environment.NewLine & Environment.NewLine & "IF YOU WANT A NEW ENTRY, DO NOT OVERWRITE AN EXISTING ENTRY. ADD A NEW ENTRY.")
 
     End Sub
 
