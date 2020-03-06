@@ -43,20 +43,21 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EH_CustomControls">
-      <HintPath>..\..\EH_CustomControls\EH_CustomControls\bin\Debug\EH_CustomControls.dll</HintPath>
+    <Reference Include="EH_DataUtilities, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\EH_DataUtilities_Web\EH_DataUtilities\bin\Debug\EH_DataUtilities.dll</HintPath>
     </Reference>
-    <Reference Include="EH_DataUtilities">
-      <HintPath>..\..\EH_DataUtilities\EH_DataUtilities\bin\Debug\EH_DataUtilities.dll</HintPath>
-    </Reference>
-    <Reference Include="EH_ExceptionTrapping">
+    <Reference Include="EH_ExceptionTrapping, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\EH_ExceptionTrapping\EH_ExceptionTrapping\bin\Debug\EH_ExceptionTrapping.dll</HintPath>
     </Reference>
-    <Reference Include="EH_Validation">
+    <Reference Include="EH_Validation, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\EH_Validation\bin\Debug\EH_Validation.dll</HintPath>
     </Reference>
-    <Reference Include="EH_Winforms_Utilities">
-      <HintPath>..\..\EH_WinForms_Utilities\eh_winforms_utilities\bin\Debug\EH_Winforms_Utilities.dll</HintPath>
+    <Reference Include="EH_Winforms_Utilities, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\EH_Winforms_Utilities\EH_Winforms_Utilities\bin\Debug\EH_Winforms_Utilities.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />

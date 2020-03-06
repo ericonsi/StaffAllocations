@@ -23,7 +23,7 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>37</ApplicationRevision>
+    <ApplicationRevision>38</ApplicationRevision>
     <ApplicationVersion>2.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -62,17 +62,16 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>7C802691AA4F9DEDF4C26592E825DF243196C4C0</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>BB9C880EB54AC4AEA423069ADD1F35AAC2AB3EBA</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestKeyFile>
-    </ManifestKeyFile>
+    <ManifestKeyFile>Staff Allocations_TemporaryKey.pfx</ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
     <GenerateManifests>true</GenerateManifests>
   </PropertyGroup>
   <PropertyGroup>
-    <SignManifests>true</SignManifests>
+    <SignManifests>false</SignManifests>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
@@ -81,10 +80,12 @@
     <Reference Include="EH_CustomControls">
       <HintPath>..\..\EH_CustomControls\EH_CustomControls\bin\Debug\EH_CustomControls.dll</HintPath>
     </Reference>
-    <Reference Include="EH_DataUtilities">
-      <HintPath>..\..\EH_DataUtilities\EH_DataUtilities\bin\Debug\EH_DataUtilities.dll</HintPath>
+    <Reference Include="EH_DataUtilities, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\EH_DataUtilities_Web\EH_DataUtilities\bin\Debug\EH_DataUtilities.dll</HintPath>
     </Reference>
-    <Reference Include="EH_ExceptionTrapping">
+    <Reference Include="EH_ExceptionTrapping, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\EH_ExceptionTrapping\EH_ExceptionTrapping\bin\Debug\EH_ExceptionTrapping.dll</HintPath>
     </Reference>
     <Reference Include="EH_Winforms_Utilities, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
@@ -238,6 +239,7 @@
     <None Include="Application Items\Staff_AllocationsDataSet.xss">
       <DependentUpon>Staff_AllocationsDataSet.xsd</DependentUpon>
     </None>
+    <None Include="Staff Allocations_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5">
