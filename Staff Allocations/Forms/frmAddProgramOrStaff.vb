@@ -97,6 +97,7 @@ Public Class frmAddProgramOrStaff
             Add_Datagridview.EndEdit()
 
             'To solve concurrency issues I added these
+
             Me.TblProgramsTableAdapter.Update(Me.Staff_AllocationsDataSet)
             Me.TblStaffTableAdapter1.Update(Me.Staff_AllocationsDataSet)
 
@@ -109,9 +110,10 @@ Public Class frmAddProgramOrStaff
 
         Catch dbcx As Data.DBConcurrencyException
 
-            Dim HandleStandardException As New EH_ExceptionTrapping.EH_Exceptions.Exception_Handlers.StandardHandler
-            HandleStandardException.HANDLE_EXCEPTION(dbcx, LOOKUP_CondtionalTraceSetting, "There has been a problem with two people being on the same staff or program record at the same time.  It is possible that not all the changes have been saved.  A message has been sent to your DB Admin to fix this problem.")
+            Dim HandleConcurrencyException As New EH_ExceptionTrapping.EH_Exceptions.Exception_Handlers.ConcurrencyHandler
+            HandleConcurrencyException.HANDLE_EXCEPTION(dbcx, LOOKUP_CondtionalTraceSetting)
 
+            HANDLE_Concurrency(dbcx)
 
         Catch ex As Exception
             Dim HandleStandardException As New EH_ExceptionTrapping.EH_Exceptions.Exception_Handlers.StandardHandler
@@ -135,7 +137,30 @@ Public Class frmAddProgramOrStaff
 
 
     End Sub
+    Private Sub Add_Datagridview_CellValueChanged(sender As Object, e As DataGridViewCellEventArgs) Handles Add_Datagridview.CellValueChanged
+        Try
 
+            Me.Validate()
+            Me.Add_Datagridview.EndEdit()
+            If radProgram.Checked Then
+                Me.TblProgramsTableAdapter.Update(Me.Staff_AllocationsDataSet)
+            Else
+                Me.TblStaffTableAdapter1.Update(Me.Staff_AllocationsDataSet)
+            End If
+
+        Catch dbcx As Data.DBConcurrencyException
+
+            Dim HandleConcurrencyException As New EH_ExceptionTrapping.EH_Exceptions.Exception_Handlers.ConcurrencyHandler
+            HandleConcurrencyException.HANDLE_EXCEPTION(dbcx, LOOKUP_CondtionalTraceSetting)
+
+            HANDLE_Concurrency(dbcx)
+
+        Catch ex As Exception
+            Dim HandleStandardException As New EH_ExceptionTrapping.EH_Exceptions.Exception_Handlers.StandardHandler
+            HandleStandardException.HANDLE_EXCEPTION(ex, LOOKUP_CondtionalTraceSetting)
+        End Try
+
+    End Sub
     Private Sub Add_Datagridview_RowValidating(sender As Object, e As DataGridViewCellCancelEventArgs) Handles Add_Datagridview.RowValidating
 
         Dim mtv As New Staff_Allocations_MiddleTier.mt_Validation.mt_Routines
@@ -310,5 +335,37 @@ Public Class frmAddProgramOrStaff
         MessageBox.Show("When you edit existing entries the new wording is updated throughout the database for all records. So edit existing entries only to fix spelling errors or modify wording.  " & Environment.NewLine & Environment.NewLine & "IF YOU WANT A NEW ENTRY, DO NOT OVERWRITE AN EXISTING ENTRY. ADD A NEW ENTRY.")
 
     End Sub
+    Private Sub HANDLE_Concurrency(dbcx As DBConcurrencyException)
+        Try
 
+            MessageBox.Show("In the near future you will be given the option of overriding the other person's changes.  For now, you will need to ask them to exit the form and then try again.")
+            Exit Sub
+
+            Dim response As DialogResult = MessageBox.Show("Your changes conflict with those of another staff member who is editing the same record.  Do you want your changes to prevail?", "Concurrency Exception", MessageBoxButtons.YesNo)
+
+            Me.Validate()
+            Me.Add_Datagridview.EndEdit()
+
+            Select Case response
+                Case DialogResult.Yes
+
+                    Me.Add_Datagridview.CommitEdit(DataGridViewDataErrorContexts.Commit)
+                    Me.Staff_AllocationsDataSet.tblStaff.AcceptChanges()
+                    Me.TblStaffTableAdapter1.Update(Me.Staff_AllocationsDataSet.tblStaff)
+                    Me.TblStaffTableAdapter1.Fill(Me.Staff_AllocationsDataSet.tblStaff)
+
+                    Dim TraceMessage As New EH_ExceptionTrapping.TraceDebugMethods
+                    TraceMessage.EH_WindowsTraceLogMessage(Environment.NewLine & Now() & ":  The following user overwrote changes to the DB - " & RETRIEVE_System_User(), LOOKUP_TraceFileLocation)
+
+
+                Case DialogResult.No
+                    MessageBox.Show("Update cancelled")
+            End Select
+
+        Catch ex As Exception
+            Dim HandleStandardException As New EH_ExceptionTrapping.EH_Exceptions.Exception_Handlers.StandardHandler
+            HandleStandardException.HANDLE_EXCEPTION(ex, LOOKUP_CondtionalTraceSetting)
+        End Try
+
+    End Sub
 End Class
