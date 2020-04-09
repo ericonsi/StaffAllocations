@@ -95,9 +95,12 @@ Public Class frmAddProgramOrStaff
             Dim mtv As New Staff_Allocations_MiddleTier.mt_Validation.mt_Routines
 
             Add_Datagridview.EndEdit()
+
+            'To solve concurrency issues I added these
             Me.TblProgramsTableAdapter.Update(Me.Staff_AllocationsDataSet)
             Me.TblStaffTableAdapter1.Update(Me.Staff_AllocationsDataSet)
 
+            'And removed this:
             'Me.TableAdapterManager.UpdateAll(Me.Staff_AllocationsDataSet)
 
             frmMain.TblProgramsTableAdapter.FillActiveOnly(frmMain.Staff_AllocationsDataSet.tblPrograms)
