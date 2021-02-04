@@ -97,6 +97,28 @@ Namespace My
                 Return CType(Me("local_connection_string"),String)
             End Get
         End Property
+        
+        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=VajraB\SQLEXPRESS;Initial Catalog=STAFF ALLOCATIONS;Integrated Securi"& _ 
+            "ty=True")>  _
+        Public ReadOnly Property local_connection_string86() As String
+            Get
+                Return CType(Me("local_connection_string86"),String)
+            End Get
+        End Property
+        
+        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=Vajra-Omen\SQLEXPRESS;Initial Catalog=STAFF ALLOCATIONS;Integrated Se"& _ 
+            "curity=True")>  _
+        Public ReadOnly Property local_connection_string54() As String
+            Get
+                Return CType(Me("local_connection_string54"),String)
+            End Get
+        End Property
     End Class
 End Namespace
 
