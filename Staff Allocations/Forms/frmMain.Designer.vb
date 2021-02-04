@@ -125,7 +125,7 @@ Partial Class frmMain
         '
         'radStaff
         '
-        Me.radStaff.BackColor = System.Drawing.Color.Tomato
+        Me.radStaff.BackColor = System.Drawing.Color.Bisque
         Me.radStaff.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.radStaff.Location = New System.Drawing.Point(37, 16)
         Me.radStaff.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
@@ -138,7 +138,7 @@ Partial Class frmMain
         '
         'radProgram
         '
-        Me.radProgram.BackColor = System.Drawing.Color.Tomato
+        Me.radProgram.BackColor = System.Drawing.Color.Bisque
         Me.radProgram.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.radProgram.Location = New System.Drawing.Point(37, 44)
         Me.radProgram.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
@@ -151,7 +151,7 @@ Partial Class frmMain
         '
         'GroupBox1
         '
-        Me.GroupBox1.BackColor = System.Drawing.Color.Tomato
+        Me.GroupBox1.BackColor = System.Drawing.Color.Bisque
         Me.GroupBox1.Controls.Add(Me.radStaff)
         Me.GroupBox1.Controls.Add(Me.radProgram)
         Me.GroupBox1.FlatStyle = System.Windows.Forms.FlatStyle.System
@@ -212,7 +212,7 @@ Partial Class frmMain
         Me.cmbStaffOrPrograms.Location = New System.Drawing.Point(102, 118)
         Me.cmbStaffOrPrograms.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
         Me.cmbStaffOrPrograms.Name = "cmbStaffOrPrograms"
-        Me.cmbStaffOrPrograms.Size = New System.Drawing.Size(130, 24)
+        Me.cmbStaffOrPrograms.Size = New System.Drawing.Size(130, 28)
         Me.cmbStaffOrPrograms.TabIndex = 2
         Me.cmbStaffOrPrograms.TabStop = False
         Me.cmbStaffOrPrograms.ValueMember = "StaffID"
@@ -247,7 +247,7 @@ Partial Class frmMain
         Me.cmbLegMonth.Location = New System.Drawing.Point(102, 145)
         Me.cmbLegMonth.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
         Me.cmbLegMonth.Name = "cmbLegMonth"
-        Me.cmbLegMonth.Size = New System.Drawing.Size(130, 24)
+        Me.cmbLegMonth.Size = New System.Drawing.Size(130, 28)
         Me.cmbLegMonth.TabIndex = 3
         Me.cmbLegMonth.TabStop = False
         Me.cmbLegMonth.ValueMember = "Date_Ordinal"
@@ -422,13 +422,13 @@ Partial Class frmMain
         Me.cmbAdd.FormattingEnabled = True
         Me.cmbAdd.Location = New System.Drawing.Point(989, 37)
         Me.cmbAdd.Name = "cmbAdd"
-        Me.cmbAdd.Size = New System.Drawing.Size(150, 24)
+        Me.cmbAdd.Size = New System.Drawing.Size(150, 28)
         Me.cmbAdd.TabIndex = 15
         Me.cmbAdd.ValueMember = "ProgramID"
         '
         'lblAdd
         '
-        Me.lblAdd.BackColor = System.Drawing.Color.Tomato
+        Me.lblAdd.BackColor = System.Drawing.Color.Bisque
         Me.lblAdd.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.lblAdd.Location = New System.Drawing.Point(882, 37)
         Me.lblAdd.Name = "lblAdd"
@@ -450,7 +450,7 @@ Partial Class frmMain
         Me.TblProgramsComboBox.FormattingEnabled = True
         Me.TblProgramsComboBox.Location = New System.Drawing.Point(14, 387)
         Me.TblProgramsComboBox.Name = "TblProgramsComboBox"
-        Me.TblProgramsComboBox.Size = New System.Drawing.Size(159, 24)
+        Me.TblProgramsComboBox.Size = New System.Drawing.Size(159, 28)
         Me.TblProgramsComboBox.TabIndex = 17
         Me.TblProgramsComboBox.ValueMember = "ProgramID"
         Me.TblProgramsComboBox.Visible = False
@@ -473,7 +473,7 @@ Partial Class frmMain
         Me.TblStaffComboBox.FormattingEnabled = True
         Me.TblStaffComboBox.Location = New System.Drawing.Point(13, 357)
         Me.TblStaffComboBox.Name = "TblStaffComboBox"
-        Me.TblStaffComboBox.Size = New System.Drawing.Size(160, 24)
+        Me.TblStaffComboBox.Size = New System.Drawing.Size(160, 28)
         Me.TblStaffComboBox.TabIndex = 17
         Me.TblStaffComboBox.ValueMember = "StaffID"
         Me.TblStaffComboBox.Visible = False
@@ -512,7 +512,7 @@ Partial Class frmMain
         '
         'Label1
         '
-        Me.Label1.BackColor = System.Drawing.Color.Tomato
+        Me.Label1.BackColor = System.Drawing.Color.LightSalmon
         Me.Label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Label1.Location = New System.Drawing.Point(279, 73)
         Me.Label1.Name = "Label1"
@@ -523,7 +523,7 @@ Partial Class frmMain
         '
         'Label2
         '
-        Me.Label2.BackColor = System.Drawing.Color.Tomato
+        Me.Label2.BackColor = System.Drawing.Color.LightSalmon
         Me.Label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Label2.Location = New System.Drawing.Point(279, 410)
         Me.Label2.Name = "Label2"
@@ -600,7 +600,7 @@ Partial Class frmMain
         Me.TblMonthsComboBox.FormattingEnabled = True
         Me.TblMonthsComboBox.Location = New System.Drawing.Point(13, 421)
         Me.TblMonthsComboBox.Name = "TblMonthsComboBox"
-        Me.TblMonthsComboBox.Size = New System.Drawing.Size(159, 24)
+        Me.TblMonthsComboBox.Size = New System.Drawing.Size(159, 28)
         Me.TblMonthsComboBox.TabIndex = 28
         Me.TblMonthsComboBox.ValueMember = "DateID"
         Me.TblMonthsComboBox.Visible = False
@@ -617,7 +617,7 @@ Partial Class frmMain
         Me.LegMonthComboBox.FormattingEnabled = True
         Me.LegMonthComboBox.Location = New System.Drawing.Point(13, 454)
         Me.LegMonthComboBox.Name = "LegMonthComboBox"
-        Me.LegMonthComboBox.Size = New System.Drawing.Size(159, 24)
+        Me.LegMonthComboBox.Size = New System.Drawing.Size(159, 28)
         Me.LegMonthComboBox.TabIndex = 28
         Me.LegMonthComboBox.ValueMember = "DateID"
         Me.LegMonthComboBox.Visible = False
@@ -755,15 +755,15 @@ Partial Class frmMain
         Me.Label4.AutoSize = True
         Me.Label4.Location = New System.Drawing.Point(24, 699)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(102, 16)
+        Me.Label4.Size = New System.Drawing.Size(130, 20)
         Me.Label4.TabIndex = 30
         Me.Label4.Text = "Version: 180925"
         '
         'frmMain
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.Tomato
+        Me.BackColor = System.Drawing.Color.Bisque
         Me.ClientSize = New System.Drawing.Size(1154, 724)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.dgvAllocatedTotals)
