@@ -55,11 +55,24 @@ Public Class Implement_IGetParameterValuesToUpdateDB_For_Approved
 
         Try
 
+            Dim iPreviousMonth As Integer = RETRIEVE_MonthOrdinalofToday() - 1
+
+
             Dim i As Integer
+            Dim sCurrentColName As String
+            Dim sProgramName As String = ""
 
             For i = 0 To frmMain.DataGridView1.SelectedCells.Count - 1
 
+                'This code prevents approval for the first column  (which is program names) AND also for entries more than one month ago
+
+                sCurrentColName = frmMain.DataGridView1.Columns(frmMain.DataGridView1.SelectedCells(i).ColumnIndex).Name
+
                 If frmMain.DataGridView1.SelectedCells(i).ColumnIndex = 0 Then
+                    sProgramName = frmMain.DataGridView1.SelectedCells(i).Value
+                    Continue For
+                ElseIf Convert.ToInt32(sCurrentColName) < iPreviousMonth Then
+                    MessageBox.Show("The date '" & LOOKUP_Date_From_DateOrd(Convert.ToInt32(sCurrentColName)) & "' for program '" & sProgramName & "'  is not authorized for approval.")
                     Continue For
                 End If
 

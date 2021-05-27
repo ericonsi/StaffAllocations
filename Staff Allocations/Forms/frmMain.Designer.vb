@@ -93,7 +93,6 @@ Partial Class frmMain
         Me.Column11 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column12 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column13 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Label4 = New System.Windows.Forms.Label()
         lblProgComments = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         CType(Me.Staff_AllocationsDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -750,22 +749,12 @@ Partial Class frmMain
         Me.Column13.ReadOnly = True
         Me.Column13.Width = 52
         '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(24, 699)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(102, 16)
-        Me.Label4.TabIndex = 30
-        Me.Label4.Text = "Version: 180925"
-        '
         'frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Tomato
         Me.ClientSize = New System.Drawing.Size(1154, 724)
-        Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.dgvAllocatedTotals)
         Me.Controls.Add(Me.LegMonthComboBox)
         Me.Controls.Add(Me.TblMonthsComboBox)
@@ -876,5 +865,4 @@ Partial Class frmMain
     Friend WithEvents Column11 As DataGridViewTextBoxColumn
     Friend WithEvents Column12 As DataGridViewTextBoxColumn
     Friend WithEvents Column13 As DataGridViewTextBoxColumn
-    Friend WithEvents Label4 As Label
 End Class
